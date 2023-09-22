@@ -1,0 +1,146 @@
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter var', sans-serif;
+  background-color: #fdfdfd;
+  color: #444;
+}
+
+div#bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-size: 0.8rem;
+  padding: 10px 0px;
+  background-color: #fdfdfd;
+  word-wrap: break-word;
+  /* box-shadow: 0px 5px 5px #888888; */
+}
+
+div#bar2 {
+  width: 768px;
+  margin: 0 auto;
+}
+
+p {
+  line-height: 1.5em;
+}
+
+li {
+  line-height: 1.5em;
+}
+
+blockquote {
+  	margin: 25px 25px;
+  	border: 1px #ddd solid;
+	border-left: 7px #ddd solid;
+	padding: 5px 20px;
+	font-style: italic;
+	color: #999;
+	border-radius: 3px;
+}
+
+div#title {
+  font-size: 2.5em;
+  font-weight: 800;
+  padding-bottom: 0px;
+}
+
+span#metadata {
+  font-size: 0.8em;
+}
+
+div#container {
+  margin: 15% auto;
+}
+
+div#content {
+	margin-top: 40px;
+}
+
+img {
+  width: 100vw;
+  padding: 80px;
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  div#container {
+    width: 768px;
+    margin: 5% auto;
+  }
+
+  img {
+    width: 768px;
+  }
+}
+
+div#footer {
+  font-size: 0.8rem;
+  margin-top: 30px;
+  padding-top: 30px;
+  # border-top: 1px #444 solid;
+  color: #666;
+}
+
+/* 
+a {
+  color: #24AFB2;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #fafafa;
+  background-color: #24AFB2;
+  text-decoration: none;
+}
+*/ 
+
+a {
+  color: #000;
+  text-decoration: none;
+  text-decoration-thickness: 1px;
+  text-decoration-color: #444;
+  background-color: #eee;
+  /* font-weight: bold; */
+  border-radius: 3px;
+  padding: 2px;
+}
+
+a:hover {
+  color: #444;
+  background-color: #92D7D8;
+  text-decoration: none;
+  /* font-weight: bold; */
+  border-radius: 3px;
+  padding: 2px;
+}
+
+/* a[href^="http"] {
+  color: black;
+  background: url(/assets/external.png) center right no-repeat;
+  padding-right: 13px;
+} */
+
+a[href^="http"]::after,
+a[href^="https://"]::after
+{
+  content: "";
+  width: 11px;
+  height: 11px;
+  margin-left: 4px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z'/%3E%3Cpath fill-rule='evenodd' d='M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+}
