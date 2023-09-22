@@ -26,7 +26,7 @@
     <div id="container">
         <div id="header">
             <div id="title">Ubuntu on Pixelbook</div>
-            <span id="metadata">by <b>Pedro Varela Saraiva</b> • Created in <b>21/09/2023</b> and last edited in <b>21/09/2023</b><br />
+            <span id="metadata">by <b>Pedro Varela Saraiva</b> • Created in <b>21/09/2023</b> and last edited in <b>22/09/2023</b><br />
 		    Links to here: <a href="pixelbook.html">Pixelbook</a></span>
 	    			        </div>
  
@@ -42,7 +42,9 @@
 <p>Besides thorough research, I personally didn&rsquo;t spend too much time preparing, possibly because <a class="wikilink" href="chromeos.html">ChromeOS</a> is very oriented towards using the Google services and the Google Drive, so most of the data should already be located in the cloud. </p>
 <p>In any case, I would suggest backing up all your local data to the Google Drive. It should be a matter of dragging and dropping folders in the file manager. Make sure you let the folders sync completely with the cloud otherwise, once the user data is erased, the data will be lost.</p>
 <p>Secondly, we need to create a bootable USB stick with a Linux distribution ISO installer. I have chosen <a class="wikilink" href="ubuntu.html">Ubuntu</a> Desktop 22.04 LTS for this case. I have used another Linux machine to download the ISO and burn it to the USB stick. Once the ISO was downloaded, I ran the command below to create the bootable USB stick:</p>
-<p><code>dd if=Downloads/ubuntu-22.04.3-desktop-amd64.iso of=/dev/sdb bs=4M status=progress conv=fdatasync</code></p>
+<pre class="codehilite"><code>dd if=Downloads/ubuntu-22.04.3-desktop-amd64.iso of=/dev/sdb bs=4M status=progress conv=fdatasync
+</code></pre>
+
 <p>The device to use in the <code>of</code> field - <code>/dev/sdb</code>  in my case - should be obvious by running <code>lsblk</code> in the terminal. I used an adapter between USB-A and USB-C to plug the USB stick to the <a class="wikilink" href="pixelbook.html">Pixelbook</a>. There are many other ways of creating a bootable USB stick. In Windows, Rufus seems to be a popular choice. I&rsquo;ve read reports selecting the &lsquo;dd image&rsquo; mode is important later on.</p>
 <p>Now, on to the hard stuff.</p>
 <h2>Developer mode</h2>
@@ -54,7 +56,9 @@
 <p>Unfortunately, we can&rsquo;t just run the script and flash the ROM, as the ROM is write-protected at hardware-level. To disable the write protection, we have to simply disconnect the battery, a process that involves removing the back panel - where the battery is glued on - and disconnecting a flat cable from the motherboard, a process very well described in <a href="https://www.ifixit.com/Guide/Google+Pixelbook+Battery+(Back+Panel)+Replacement/103036">this iFixit article</a>. </p>
 <p>It&rsquo;s understandable if you don&rsquo;t feel confident proceeding with this madness. At this point, you can still boot to recovery, disable developer mode and restart normally to <a class="wikilink" href="chromeos.html">ChromeOS</a>. There is <a href="https://wiki.mrchromebox.tech/Firmware_Write_Protect#Disabling_WP_on_CR50_Devices_via_CCD">another method</a> described in MrChromebox&rsquo;s website that should be less invasive but requires a special debug USB cable, which I have not tried.</p>
 <p>Assuming my readership was brave enough to go ahead with opening the Pixelbook and disconnecting the battery, it is possible now to start the Pixelbook, launch the <code>crosh</code> with <code>Ctrl + Alt + T</code>, type <code>shell</code>, launch the Firmware Utility Script with </p>
-<p><code>cd; curl -LO mrchromebox.tech/firmware-util.sh &amp;&amp; sudo bash firmware-util.sh</code> </p>
+<pre class="codehilite"><code>cd; curl -LO mrchromebox.tech/firmware-util.sh &amp;&amp; sudo bash firmware-util.sh
+</code></pre>
+
 <p>as described in <a href="https://mrchromebox.tech/#fwscript">here</a>, and select <code>Install/Update UEFI (Full ROM) Firmware</code>. This is the last time you&rsquo;ll see <a class="wikilink" href="chromeos.html">ChromeOS</a> in this <a class="wikilink" href="pixelbook.html">Pixelbook</a>, before shutting down.</p>
 <p>The battery can now be reconnected to the motherboard and the back panel reattached, to enable write-protection again.</p>
 <h2>Installing Ubuntu and mitigating some quirks</h2>
