@@ -28,7 +28,7 @@ div#bar {
 
 div#bar2 {
   width: 768px;
-  margin: 0 auto;
+  margin: 0 10px;
 }
 
 p {
@@ -78,27 +78,41 @@ code {
   border-radius: 3px;
   padding: 3px;
   font-size: 1.2em;
-  vertical-align: top;
+  line-height: 1.5em;
+  vertical-align: middle;
 }
 
 pre {
-  margin: 40px 0px 40px 0px;
+  background-color: #444;
+  margin: 20px 0px;
+  padding: 20px;
+  border-radius: 3px;
+  white-space: pre-wrap;       /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
 
-pre code {
+/* pre code {
   background-color: #444;
   color: #eee;
   border-radius: 3px;
-  padding: 20px;
   font-size: 1.2em;
-  vertical-align: top;
-}
+
+  vertical-align: middle;
+} */
 
 @media only screen and (min-width: 768px) {
   /* For desktop: */
   div#container {
     width: 768px;
     margin: 5% auto;
+  }
+
+  div#bar2 {
+    width: 768px;
+    margin: 0 auto;
   }
 
   img {
