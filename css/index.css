@@ -39,22 +39,13 @@ div#footer {
 }
 
 a {
-  color: #000;
+  color: #3aafa9;
   text-decoration: none;
-  text-decoration-thickness: 1px;
-  text-decoration-color: #444;
-  background-color: #eee;
-  /* font-weight: bold; */
-  border-radius: 3px;
-  padding: 2px;
 }
 
 a:hover {
-  color: #444;
-  background-color: #92D7D8;
+  color: #55c7c1;
   text-decoration: none;
-  /* font-weight: bold; */
-  border-radius: 3px;
 }
 
 a[href^="http"]::after,
