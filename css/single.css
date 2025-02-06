@@ -140,7 +140,7 @@ div#footer {
   color: #666;
 }
 
-/* 
+/*
 a {
   color: #24AFB2;
   text-decoration: none;
@@ -180,4 +180,15 @@ a[href^="https://"]::after {
   background-repeat: no-repeat;
   background-size: contain;
   display: inline-block;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
 }

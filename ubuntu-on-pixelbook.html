@@ -1,41 +1,45 @@
-<!DOCTYPE html>
+<!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+    <head>
+        
+                <!-- Google tag (gtag.js) -->
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-1NX91MER2J"></script>
+                <script>
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
 
-<head>
+                  gtag('config', 'G-1NX91MER2J');
+                </script>
 
-    
-                    <!-- Google tag (gtag.js) -->
-                    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-2568555-2"></script>
-                    <script>
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, user-scalable=yes"
+        />
+        <title>Ubuntu on Pixelbook</title>
+        <link rel="stylesheet" href="css/single.css" />
+        <!--[if lt IE 9]>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+        <![endif]-->
+    </head>
 
-                    gtag('config', 'UA-2568555-2');
-                    </script>
-
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-    <title>Ubuntu on Pixelbook</title>
-    <link rel="stylesheet" href="css/single.css" />
-    <!--[if lt IE 9]>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-    <![endif]-->
-</head>
-
-<body>
-    <div id="bar">
-        <div id="bar2">Ubuntu on Pixelbook - <a href="index.html">Home</a></div>
-    </div>
-    <div id="container">
-        <div id="header">
-            <div id="title">Ubuntu on Pixelbook</div>
-            <span id="metadata">by <b>Pedro Varela Saraiva</b> • Created in <b>21/09/2023</b> and last edited in
-                <b>01/10/2023</b><br />
-                Links to here: <a href="pixelbook.html">Pixelbook</a></span>
+    <body>
+        <div id="bar">
+            <div id="bar2">Ubuntu on Pixelbook - <a href="index.html">Home</a></div>
         </div>
-        <div id="content">
-            <p><em>Disclaimer: do not follow this tutorial if you cannot afford losing your Pixelbook. I accept no liability for any loss. Posting questions in the subreddit <a href="https://reddit.com/r/chrultrabook">r/chrultrabook</a> is your best chance of getting expert help.</em></p>
+        <div id="container">
+            <div id="header">
+                <div id="title">Ubuntu on Pixelbook</div>
+                <span id="metadata">
+                    by <b>Pedro Varela Saraiva</b><br />
+                    <!--•-->&nbsp;<br />
+                    Created in <b>21/09/2023</b> and last edited in
+                    <b>05/02/2025</b><br />
+                    Links to here: <a href="pixelbook.html">Pixelbook</a></span
+                >
+            </div>
+            <div id="content"><p><em>Disclaimer: do not follow this tutorial if you cannot afford losing your Pixelbook. I accept no liability for any loss. Posting questions in the subreddit <a href="https://reddit.com/r/chrultrabook">r/chrultrabook</a> is your best chance of getting expert help.</em></p>
 <h2>Introduction</h2>
 <p>My <a class="wikilink" href="pixelbook.html">Google Pixelbook</a> expires on June 2024. I have decided I will not replace the hardware, so to replace <a class="wikilink" href="chromeos.html">ChromeOS</a>, I have to reflash the BIOS, format partitions and install Linux. I could do this next year but I actually missed using Linux and <a class="wikilink" href="gnome.html">GNOME</a> as my daily driver after years with <a class="wikilink" href="chromeos.html">ChromeOS</a> and i3.</p>
 <p>I didn&rsquo;t expect an easy setup but I expect a stable experience once it&rsquo;s set up. This article describes how I&rsquo;ve managed to install and use <a class="wikilink" href="ubuntu.html">Ubuntu</a> on a <a class="wikilink" href="pixelbook.html">Google Pixelbook</a> as it&rsquo;s sole operating system. Beware, it&rsquo;s not for the faint of heart.</p>
@@ -43,8 +47,8 @@
 <p>Besides thorough research, I personally didn&rsquo;t spend too much time preparing, possibly because <a class="wikilink" href="chromeos.html">ChromeOS</a> is very oriented towards using the Google services and the Google Drive, so most of the data should already be located in the cloud. </p>
 <p>In any case, I would suggest backing up all your local data to the Google Drive. It should be a matter of dragging and dropping folders in the file manager. Make sure you let the folders sync completely with the cloud otherwise, once the user data is erased, the data will be lost.</p>
 <p>Secondly, we need to create a bootable USB stick with a Linux distribution ISO installer. I have chosen <a class="wikilink" href="ubuntu.html">Ubuntu</a> Desktop 22.04 LTS for this case. I have used another Linux machine to download the ISO and burn it to the USB stick. Once the ISO was downloaded, I ran the command below to create the bootable USB stick:</p>
-<pre class="codehilite"><code>dd if=Downloads/ubuntu-22.04.3-desktop-amd64.iso of=/dev/sdb bs=4M status=progress conv=fdatasync
-</code></pre>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>dd<span style="color: #BBB"> </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #666">=</span>Downloads/ubuntu-22.04.3-desktop-amd64.iso<span style="color: #BBB"> </span><span style="color: #19177C">of</span><span style="color: #666">=</span>/dev/sdb<span style="color: #BBB"> </span><span style="color: #19177C">bs</span><span style="color: #666">=</span>4M<span style="color: #BBB"> </span><span style="color: #19177C">status</span><span style="color: #666">=</span>progress<span style="color: #BBB"> </span><span style="color: #19177C">conv</span><span style="color: #666">=</span>fdatasync
+</code></pre></div>
 
 <p>The device to use in the <code>of</code> field - <code>/dev/sdb</code>  in my case - should be obvious by running <code>lsblk</code> in the terminal. I used an adapter between USB-A and USB-C to plug the USB stick to the <a class="wikilink" href="pixelbook.html">pixelbook</a>. There are many other ways of creating a bootable USB stick. In Windows, Rufus seems to be a popular choice. I&rsquo;ve read reports selecting the &lsquo;dd image&rsquo; mode is important later on.</p>
 <p>Now, on to the hard stuff.</p>
@@ -57,8 +61,8 @@
 <p>Unfortunately, we can&rsquo;t just run the script and flash the ROM, as the ROM is write-protected at hardware-level. To disable the write protection, we have to simply disconnect the battery, a process that involves removing the back panel - where the battery is glued on - and disconnecting a flat cable from the motherboard, a process very well described in <a href="https://www.ifixit.com/Guide/Google+Pixelbook+Battery+(Back+Panel)+Replacement/103036">this iFixit article</a>. </p>
 <p>It&rsquo;s understandable if you don&rsquo;t feel confident proceeding with this madness. At this point, you can still boot to recovery, disable developer mode and restart normally to <a class="wikilink" href="chromeos.html">ChromeOS</a>. There is <a href="https://wiki.mrchromebox.tech/Firmware_Write_Protect#Disabling_WP_on_CR50_Devices_via_CCD">another method</a> described in MrChromebox&rsquo;s website that should be less invasive but requires a special debug USB cable, which I have not tried.</p>
 <p>Assuming my readership was brave enough to go ahead with opening the Pixelbook and disconnecting the battery, it is possible now to start the Pixelbook, launch the <code>crosh</code> with <code>Ctrl + Alt + T</code>, type <code>shell</code>, launch the Firmware Utility Script with </p>
-<pre class="codehilite"><code>cd; curl -LO mrchromebox.tech/firmware-util.sh &amp;&amp; sudo bash firmware-util.sh
-</code></pre>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>cd;<span style="color: #BBB"> </span>curl<span style="color: #BBB"> </span>-LO<span style="color: #BBB"> </span>mrchromebox.tech/firmware-util.sh<span style="color: #BBB"> </span><span style="color: #666">&amp;&amp;</span><span style="color: #BBB"> </span>sudo<span style="color: #BBB"> </span>bash<span style="color: #BBB"> </span>firmware-util.sh
+</code></pre></div>
 
 <p>as described in <a href="https://mrchromebox.tech/#fwscript">here</a>, and select <code>Install/Update UEFI (Full ROM) Firmware</code>. This is the last time you&rsquo;ll see <a class="wikilink" href="chromeos.html">ChromeOS</a> in this <a class="wikilink" href="pixelbook.html">pixelbook</a>, before shutting down.</p>
 <p>The battery can now be reconnected to the motherboard and the back panel reattached, to enable write-protection again.</p>
@@ -68,13 +72,9 @@
 <p>By now, you should have everything working except, I think, sound and the top row of the keyboard. I have not tested whether input events from the stylus are being recognised but intend to do so soon. It would be great if the stylus still worked with it for some ad-hoc whiteboarding.</p>
 <p>To fix the sound and the keyboard, I have followed <a href="https://reddit.com/r/chrultrabook/s/j4oRatD9Aw">this thread</a> in Reddit. The important part entails installing the packages <code>pixelbook-alsa</code> and <code>pixelbook-keybd</code> from <a href="https://drive.google.com/drive/folders/1POOaM7r1TnH_p7ONHPNFnFeIrFtueFw_">this folder</a> in Google Drive. I have not tried the <code>pixelbook-sensors</code> package. Sound and keyboard should now work out of the box.</p>
 <p>The only issue I have at the moment is, whenever I plug headphones in or out, the sound device is not switched automatically. It has to be done manually in the Settings &gt; Sound dialogue, which is a bit a annoying. I&rsquo;ll try to fix this issue once <a class="wikilink" href="ubuntu.html">Ubuntu</a> 23.10 comes out.</p>
-<p>Other than that, it has been running quite stable so far, <a class="wikilink" href="gnome.html">GNOME</a> is a very polished experience and, in the age of PWAs and the cloud, I don&rsquo;t feel limited in any way. It would be great to have more than 8 GB of RAM for more browser tabs.</p>
-        </div>
+<p>Other than that, it has been running quite stable so far, <a class="wikilink" href="gnome.html">GNOME</a> is a very polished experience and, in the age of PWAs and the cloud, I don&rsquo;t feel limited in any way. It would be great to have more than 8 GB of RAM for more browser tabs.</p></div>
 
-        <div id="footer">
-            © 2023 Pedro Varela Saraiva
+            <div id="footer">© 2023-2025 Pedro Varela Saraiva</div>
         </div>
-    </div>
-</body>
-
+    </body>
 </html>
