@@ -20,6 +20,7 @@ p {
 
 div#container {
   margin: 5% auto;
+  padding: 0 10px;
 }
 
 div#footer {
@@ -35,7 +36,6 @@ div#footer {
   div#container {
     width: 768px;
     margin: 5% auto;
-    padding: 0 10px;
   }
 }
 
