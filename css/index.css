@@ -12,6 +12,7 @@ body {
   font-family: 'Inter var', sans-serif;
   background-color: #fdfdfd;
   color: #444;
+  padding: 0 10px;
 }
 
 p {
@@ -20,7 +21,6 @@ p {
 
 div#container {
   margin: 5% auto;
-  padding: 0 10px;
 }
 
 div#footer {
