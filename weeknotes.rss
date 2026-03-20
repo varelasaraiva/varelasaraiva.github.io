@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Weeknotes</title>
+        <title>varelasaraiva.com Weeknotes</title>
         <link>/</link>
         <description>A collection of weeknotes</description>
         <atom:link href="/weeknotes.rss" rel="self" type="application/rss+xml" />
@@ -16,6 +16,14 @@
 <li>I have been listening to the remix of Severance soundtrack, <a href="https://www.youtube.com/watch?v=JRnDYB28bL8">Music To Refine To</a>, while working and it’s pretty good. I’ve never watched the show but everything I’ve seen about it looks great, right up my alley. On the other hand, I get the sense it would be a depressing watch as the premise hits too close to home.</li>
 <li>There’ll be more next week - see you then!</li>
 </ul>
+]]></description>
+        </item>
+        <item>
+            <title>Weeknotes 202612</title>
+            <link>/weeknotes-202612.html</link>
+            <guid isPermaLink="true">/weeknotes-202612.html</guid>
+            <pubDate>Fri, 20 Mar 2026 21:50:16 +0000</pubDate>
+            <description><![CDATA[<p>Lorem Ipsum</p>
 ]]></description>
         </item>
         <item>

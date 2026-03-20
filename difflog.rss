@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Diff Log</title>
+        <title>varelasaraiva.com diff log</title>
         <link>/</link>
         <description>A log of changes to the site content</description>
         <atom:link href="/difflog.rss" rel="self" type="application/rss+xml" />
@@ -136,6 +136,19 @@
 +
 +## Legal
 +All content within varelasaraiva.com is owned by me unless stated otherwise. My personal views are not my employer's.
+\ No newline at end of file</code></pre>]]></description>
+        </item>
+        <item>
+            <title>Diff for Weeknotes 202612</title>
+            <link>/weeknotes-202612.html</link>
+            <guid isPermaLink="true">/weeknotes-202612.html</guid>
+            <pubDate>Fri, 20 Mar 2026 21:50:16 +0000</pubDate>
+            <description><![CDATA[<pre><code>+---
++title: Weeknotes 202612
++category: weeknote
++publish: false
++---
++Lorem Ipsum
 \ No newline at end of file</code></pre>]]></description>
         </item>
         <item>
