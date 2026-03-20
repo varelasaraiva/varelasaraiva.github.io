@@ -1,109 +1,111 @@
-@import url('https://rsms.me/inter/inter.css');
-
-html {
-  font-family: 'Inter', sans-serif;
-}
+@import url("./font-files/inter.css");
+@import url("./font-files/jetbrains-mono-nf.css");
 
 @supports (font-variation-settings: normal) {
-  html {
-    font-family: 'Inter var', sans-serif;
-  }
+    html {
+        font-family: "Inter var", sans-serif;
+    }
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Inter var', sans-serif;
-  background-color: #fdfdfd;
-  color: #444;
-  margin: 0;
-  padding: 0 20px;
+    font-family: "Inter var", sans-serif;
+    background-color: #ffffff;
+    color: #000;
+    margin: 0;
+    padding: 0 20px;
 }
 
 div#bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  font-size: 0.8rem;
-  padding: 10px 20px;
-  background-color: #fdfdfd;
-  word-wrap: break-word;
-  /* box-shadow: 0px 5px 5px #888888; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: 0.8rem;
+    padding: 10px 20px;
+    background-color: #fdfdfd;
+    word-wrap: break-word;
+    /* box-shadow: 0px 5px 5px #888888; */
 }
 
 div#bar2 {
-  width: 768px;
+    width: 768px;
 }
 
 p {
-  line-height: 1.5em;
+    line-height: 1.5em;
 }
 
 li {
-  line-height: 1.5em;
+    line-height: 1.5em;
+    margin: 10px 0px 10px 0px;
 }
 
 blockquote {
-  margin: 25px 25px;
-  border: 1px #ddd solid;
-  border-left: 7px #ddd solid;
-  padding: 5px 20px;
-  font-style: italic;
-  color: #999;
-  border-radius: 3px;
+    margin: 25px 25px;
+    border: 1px #ddd solid;
+    border-left: 7px #ddd solid;
+    padding: 5px 20px;
+    font-style: italic;
+    color: #999;
+    border-radius: 3px;
 }
 
 div#title {
-  font-size: 2.5em;
-  font-weight: 800;
-  padding-bottom: 0px;
+    font-size: 2.5em;
+    font-weight: 800;
+    padding-bottom: 5px;
 }
 
 span#metadata {
-  font-size: 0.8em;
+    font-size: 0.8em;
+    line-height: 1.8em;
 }
 
 div#container {
-  margin: 15% auto;
+    margin: 15% auto;
 }
 
 div#content {
-  margin-top: 40px;
+    margin-top: 40px;
 }
 
 img {
-  width: 100vw;
-  padding: 10px 80px 10px 80px;
+    width: 100vw;
+    padding: 10px 80px 10px 80px;
 }
 
 code {
-  background-color: #eee;
-  color: #444;
-  border-radius: 3px;
-  padding: 3px;
-  font-size: 1.2em;
-  line-height: 1.5em;
-  vertical-align: middle;
+    font-family: "JetBrains Mono NF", monospace;
+    background-color: #eee;
+    color: #444;
+    border-radius: 3px;
+    padding: 3px;
+    font-size: 0.9em;
+    /* line-height: 1.5em; */
+    vertical-align: middle;
 }
 
 pre {
-  background-color: #eee;
-  margin: 20px 0px;
-  padding: 20px;
-  border-radius: 10px;
-  white-space: pre-wrap;
-  /* Since CSS 2.1 */
-  white-space: -moz-pre-wrap;
-  /* Mozilla, since 1999 */
-  white-space: -pre-wrap;
-  /* Opera 4-6 */
-  white-space: -o-pre-wrap;
-  /* Opera 7 */
-  word-wrap: break-word;
-  /* Internet Explorer 5.5+ */
+    font-family: "JetBrains Mono NF", monospace;
+    font-size: 1em;
+    background-color: #eee;
+    margin: 20px 0px;
+    padding: 20px;
+    border-radius: 10px;
+    white-space: pre-wrap;
+    /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;
+    /* Mozilla, since 1999 */
+    white-space: -pre-wrap;
+    /* Opera 4-6 */
+    white-space: -o-pre-wrap;
+    /* Opera 7 */
+    word-wrap: break-word;
+    /* Internet Explorer 5.5+ */
 }
 
 /* pre code {
@@ -116,29 +118,38 @@ pre {
 } */
 
 @media only screen and (min-width: 768px) {
+    /* For desktop: */
+    div#container {
+        width: 768px;
+        margin: 5% auto;
+    }
 
-  /* For desktop: */
-  div#container {
-    width: 768px;
-    margin: 5% auto;
-  }
+    div#bar2 {
+        width: 768px;
+        margin: 0 auto;
+    }
 
-  div#bar2 {
-    width: 768px;
-    margin: 0 auto;
-  }
-
-  img {
-    width: 768px;
-  }
+    img {
+        width: 768px;
+    }
 }
 
 div#footer {
     text-align: center;
-  font-size: 0.8rem;
-  margin-top: 30px;
-  # border-top: 1px #444 solid;
-  color: #ccc;
+    font-size: 0.8rem;
+    margin-top: 30px;
+    /* border-top: 1px #444 solid; */
+    color: #aaa;
+}
+
+table#tags tr td {
+    border: 0px;
+}
+
+td#tags_date {
+    text-align: right;
+    width: 150px;
+    padding-right: 20px;
 }
 
 /*
@@ -155,13 +166,16 @@ a:hover {
 */
 
 a {
-  color: #3aafa9;
-  text-decoration: none;
+    /* color: #3aafa9; */
+    color: #000;
+    font-weight: 400;
+    text-decoration: underline;
 }
 
 a:hover {
-  color: #55c7c1;
-  text-decoration: none;
+    color: #000;
+    background-color: aquamarine;
+    text-decoration: none;
 }
 
 /* a[href^="http"] {
@@ -172,24 +186,25 @@ a:hover {
 
 a[href^="http"]::after,
 a[href^="https://"]::after {
-  content: "";
-  width: 11px;
-  height: 11px;
-  margin-left: 4px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z'/%3E%3Cpath fill-rule='evenodd' d='M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z'/%3E%3C/svg%3E");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  display: inline-block;
+    content: "";
+    width: 11px;
+    height: 11px;
+    margin-left: 4px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z'/%3E%3Cpath fill-rule='evenodd' d='M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z'/%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
 }
 
 table {
-  border-collapse: collapse;
-  width: 100%;
+    border-collapse: collapse;
+    width: 100%;
 }
 
-th, td {
-  border: 1px solid black;
-  padding: 8px;
-  text-align: left;
+th,
+td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
 }

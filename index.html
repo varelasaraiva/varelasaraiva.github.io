@@ -7,7 +7,19 @@
             content="width=device-width, initial-scale=1.0, user-scalable=yes"
         />
         <title>VS.com</title>
-        <link rel="stylesheet" href="css/index.css" />
+        <link
+            rel="alternate"
+            type="application/rss+xml"
+            title="Weeknotes"
+            href="weeknotes.rss"
+        />
+        <link
+            rel="alternate"
+            type="application/rss+xml"
+            title="Diff Log"
+            href="difflog.rss"
+        />
+        <link rel="stylesheet" href="css/single.css" />
         <!--[if lt IE 9]>
             <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
         <![endif]-->
@@ -15,7 +27,15 @@
     </head>
     <body>
         <div id="container">
-            <h1 style="font-size: 5em; margin: 80px 0px 30px 0px">Hello</h1>
+            <h1
+                style="
+                    font-size: 7em;
+                    letter-spacing: -0.05em;
+                    margin: 80px 0px 30px 0px;
+                "
+            >
+                Hello
+            </h1>
             <img
                 src="assets/avatar_128.png"
                 style="
@@ -26,10 +46,18 @@
                 "
             />
             <p>
-                You found me &mdash; welcome! I'm Pedro Varela Saraiva, a
+                Welcome &mdash; you found me! I'm Pedro Varela Saraiva, a
                 UK-based data scientist working in the telco sector, currently
                 living in a leafy part of the country somewhere between London
                 and Cambridge. Husband and dad of two.
+            </p>
+
+            <p>
+                Start here:
+                <a href="now.html">/now</a>
+                <a href="weeknotes.html">/weeknotes</a>
+                <a href="library.html">/library</a>
+                <a href="rss.html">/rss</a>
             </p>
 
             <p>
@@ -43,7 +71,7 @@
                     >Signal</a
                 >
             </p>
-            <div id="footer">© 2023-2025 Pedro Varela Saraiva</div>
+            <div id="footer">© 2023-2026 Pedro Varela Saraiva</div>
         </div>
     </body>
 </html>

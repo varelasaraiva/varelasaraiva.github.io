@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Diff Log</title>
+        <link>/</link>
+        <description>A log of changes to the site content</description>
+        <atom:link href="/difflog.rss" rel="self" type="application/rss+xml" />
+        <item>
+            <title>Diff for Ubuntu on Pixelbook</title>
+            <link>/ubuntu-on-pixelbook.html</link>
+            <guid isPermaLink="true">/ubuntu-on-pixelbook.html</guid>
+            <pubDate>Fri, 20 Mar 2026 21:50:16 +0000</pubDate>
+            <description><![CDATA[<pre><code>+---
++title: Ubuntu on Pixelbook
++created_date: 21/09/2023
++publish: true
++tags:
++  - device
++  - tutorial
++---
++*Disclaimer: This article should now be obsolete. If you think the information is still valid and links to external URLs have not rotted yet, do not follow this tutorial if you cannot afford losing your Pixelbook. I accept no liability for any loss. Posting questions in the subreddit [r/chrultrabook](https://reddit.com/r/chrultrabook) is your best chance of getting expert help.*
++
++## Introduction
++
++My [[pixelbook|Google Pixelbook]] expires on June 2024. I have decided I will not replace the hardware, so to replace [[ChromeOS]], I have to reflash the BIOS, format partitions and install Linux. I could do this next year but I actually missed using Linux and [[GNOME]] as my daily driver after years with [[ChromeOS]] and i3.
++
++I didn't expect an easy setup but I expected a stable experience once it was set up. This article describes how I've managed to install and use [[Ubuntu]] on a [[pixelbook|Google Pixelbook]] as it's sole operating system. Beware, it's not for the faint of heart.
++
++## Preparation
++
++Besides thorough research, I personally didn't spend too much time preparing, possibly because [[ChromeOS]] is very oriented towards using the Google services and the Google Drive, so most of the data was already located in the cloud. 
++
++In any case, I would suggest backing up all your local data to the Google Drive. It should be a matter of dragging and dropping folders in the file manager. Make sure you let the folders sync completely with the cloud otherwise, once the user data is erased, the data will be lost.
++
++Secondly, we need to create a bootable USB stick with a Linux distribution ISO installer. I have chosen [[Ubuntu]] Desktop 22.04 LTS for this case. I have used another Linux machine to download the ISO and burn it to the USB stick. Once the ISO was downloaded, I ran the command below to create the bootable USB stick:
++
++
++```bash
++dd if=Downloads/ubuntu-22.04.3-desktop-amd64.iso of=/dev/sdb bs=4M status=progress conv=fdatasync
++```
++
++The device to use in the `of` field - `/dev/sdb`  in my case - should be obvious by running `lsblk` in the terminal. I used an adapter between USB-A and USB-C to plug the USB stick to the [[pixelbook]]. There are many other ways of creating a bootable USB stick. In Windows, Rufus seems to be a popular choice. I've read reports selecting the 'dd image' mode is important later on.
++
++Now, on to the hard stuff.
++
++## Developer mode
++
++Despite of [[ChromeOS]] being Linux under the bonnet, the [[pixelbook|Google Pixelbook]] is very well locked up and secure. It has proprietary BIOS, firmwares, etc. Therefore, it's not possible by default to sideload an installer of an alternative operating system and install it side by side or in place of ChromeOS. One has to get access and reflash the ROM with an open BIOS like Coreboot to be able to do so. 
++
++I have used the Firmware Utility Script by [MrChromebox](https://twitter.com/mrchromebox) described in [his site](https://mrchromebox.tech) to install the firmware. This script must be run in the `crosh` terminal. The terminal in the `crostini` container does not have full access to the hardware, so it's impossible to flash the ROM from there. To get access to the `crosh` shell, the [[pixelbook]] must be in developer mode. One of the side effects of enabling the developer mode is essentially doing a factory reset to the [[pixelbook]], so at this point you should be prepared to erase all local data. 
++
++The developer mode is accessed via the recovery menu. To reboot to recovery, press and hold `Esc + Refresh` and then press the power button. Once you see the recovery menu, you can let go of `Esc + Refresh`, as described [here](https://support.google.com/pixelbook/answer/9134768?hl=en#zippy=%2Cstep-enter-recovery-mode) in step 3. To enable developer mode, press `Ctrl + D` and confirm, as described [here](https://mrchromebox.tech/#devmode).
++
++The next time the [[pixelbook]] is started, it will show a welcome screen like it's being switched on for the first time. I believe the `crosh` terminal can be invoked from the first screen with a `Ctrl + Alt + T`. Otherwise, you'll have to configure an account, login normally and finally invoke `crosh` using the same combination from there.
++
++## Removing write protection and flashing BIOS
++
++Unfortunately, we can't just run the script and flash the ROM, as the ROM is write-protected at hardware-level. To disable the write protection, we have to simply disconnect the battery, a process that involves removing the back panel - where the battery is glued on - and disconnecting a flat cable from the motherboard, a process very well described in [this iFixit article](https://www.ifixit.com/Guide/Google+Pixelbook+Battery+(Back+Panel)+Replacement/103036). 
++
++It's understandable if you don't feel confident proceeding with this madness. At this point, you can still boot to recovery, disable developer mode and restart normally to [[ChromeOS]]. There is [another method](https://wiki.mrchromebox.tech/Firmware_Write_Protect#Disabling_WP_on_CR50_Devices_via_CCD) described in MrChromebox's website that should be less invasive but requires a special debug USB cable, which I have not tried.
++
++Assuming my readership was brave enough to go ahead with opening the Pixelbook and disconnecting the battery, it is possible now to start the Pixelbook, launch the `crosh` with `Ctrl + Alt + T`, type `shell`, launch the Firmware Utility Script with 
++
++```bash
++cd; curl -LO mrchromebox.tech/firmware-util.sh && sudo bash firmware-util.sh
++``` 
++
++as described in [here](https://mrchromebox.tech/#fwscript), and select `Install/Update UEFI (Full ROM) Firmware`. This is the last time you'll see [[ChromeOS]] in this [[pixelbook]], before shutting down.
++
++The battery can now be reconnected to the motherboard and the back panel reattached, to enable write-protection again.
++
++## Installing Ubuntu and mitigating some quirks
++
++In the next reboot, you'll be greeted with the Coreboot logo. Chances are that you've rebooted with the USB stick plugged in but it is not being detected in the Coreboot boot menu. The solution for me was to go back to the main/root menu, unplug the USB stick, wait a couple of seconds, plug it back again, wait ~3 seconds and check the boot menu again. It didn't work straight way with me and this could be quite distressing until it works.
++
++Once you'll see an USB-related entry in the boot menu and select it, things will then become quite familiar if you've installed [[Ubuntu]] before. In my case, during the whole installation process, the picture was flipped upside down. This shouldn't prevent completing the installation, if we ignore the awkwardness. In the first boot after the installation the picture was oriented correctly.
++
++By now, you should have everything working except, I think, sound and the top row of the keyboard. I have not tested whether input events from the stylus are being recognised but intend to do so soon. It would be great if the stylus still worked with it for some ad-hoc whiteboarding.
++
++To fix the sound and the keyboard, I have followed [this thread](https://reddit.com/r/chrultrabook/s/j4oRatD9Aw) in Reddit. The important part entails installing the packages `pixelbook-alsa` and `pixelbook-keybd` from [this folder](https://drive.google.com/drive/folders/1POOaM7r1TnH_p7ONHPNFnFeIrFtueFw_) in Google Drive. I have not tried the `pixelbook-sensors` package. Sound and keyboard should now work out of the box.
++
++The only issue I have at the moment is, whenever I plug headphones in or out, the sound device is not switched automatically. It has to be done manually in the Settings > Sound dialogue, which is a bit a annoying. I'll try to fix this issue once [[Ubuntu]] 23.10 comes out.
++
++Other than that, it has been running quite stable so far, [[GNOME]] is a very polished experience and, in the age of PWAs and the cloud, I don't feel limited in any way. It would be great to have more than 8 GB of RAM for more browser tabs.
+\ No newline at end of file</code></pre>]]></description>
+        </item>
+        <item>
+            <title>Diff for Weeknotes 202511</title>
+            <link>/weeknotes-202507.html</link>
+            <guid isPermaLink="true">/weeknotes-202507.html</guid>
+            <pubDate>Fri, 20 Mar 2026 21:50:16 +0000</pubDate>
+            <description><![CDATA[<pre><code>+---
++title: Weeknotes 202511
++created_date: 16/03/2025
++publish: true
++category: weeknote
++---
++
++- It was today the first Formula 1 Grand Prix of the season in Melbourne. I’m watching it as I write this week’s notes. It is being quite entertaining. The McLaren seems to be the class of the field, confirming the suspicions of the pre-season testing. It seems this year’s car is very good at not putting too much strain in the tires, slowing the rate of decay in performance and allowing the drivers to push for longer.
++- I was confident at the end of last year that very soon I’d have more time and energy because nights with the 1 year old were going to improve but it’s already mid-March and it seems the year is flying by and I haven’t crossed anything from the 2025 objectives yet.
++- I have been listening to the remix of Severance soundtrack, [Music To Refine To](https://www.youtube.com/watch?v=JRnDYB28bL8), while working and it’s pretty good. I’ve never watched the show but everything I’ve seen about it looks great, right up my alley. On the other hand, I get the sense it would be a depressing watch as the premise hits too close to home.
++- There’ll be more next week - see you then!
+\ No newline at end of file</code></pre>]]></description>
+        </item>
+        <item>
+            <title>Diff for Colophon</title>
+            <link>/colophon.html</link>
+            <guid isPermaLink="true">/colophon.html</guid>
+            <pubDate>Fri, 20 Mar 2026 21:50:16 +0000</pubDate>
+            <description><![CDATA[<pre><code>+---
++title: Colophon
++created_date: 28/09/2023
++publish: true
++tags:
++  - forward-slash
++---
++
++This website is composed of static, interlinked HTML files, structured like a wiki. It is generated by my own static site generator, written in [[Python]], that consumes `.md` files from an [[Obsidian]] vault, and renders HTML using templates. It extends `networkx.DiGraph()` to simplify features like extracting backlinks for each wiki node and other graph-theoretic functionality that may be added in the future, once structure emerges.
++
++The font used throughout the wiki is [Inter](https://rsms.me/inter) by [Rasmus Andersson](https://rsms.me).
++
++The files are currently served by [GitHub Pages](https://pages.github.com/).
++
++## Roadmap
++There are a number of features I will add gradually to the engine, as time permits. Some of these features are already implemented in the backend but not surfaced yet in the rendered page.
++
++- RSS/Atom feed
++- <del>Inline external link icon</del>
++- <del>Tags</del> (not sure if it will be used)
++- <del>Code formatting</del>
++- <del>Syntax highlighting</del>
++- <del>Table formatting</del>
++- Search capability
++- Favicon
++- Go back to top link
++
++## Legal
++All content within varelasaraiva.com is owned by me unless stated otherwise. My personal views are not my employer's.
+\ No newline at end of file</code></pre>]]></description>
+        </item>
+        <item>
+            <title>Diff for Now</title>
+            <link>/now.html</link>
+            <guid isPermaLink="true">/now.html</guid>
+            <pubDate>Fri, 20 Mar 2026 21:50:16 +0000</pubDate>
+            <description><![CDATA[<pre><code>+---
++title: Now
++created_date: 10/03/2022
++publish: true
++---
++I currently work as a data scientist in the UK telco sector. I live with my family in a leafy town somewhere between London and Cambridge, UK.
++
++After being a parent for the first time, lately I've been able to save some energy and find little pockets of free time here and there. The plan is to continue learning about [[data-science|data science]] topics relevant to my line of work and, more generally, other topics in applied maths.
++
++### Currently working on
++- Small DIY jobs around the house during daytime, now mostly indoors as it's too cold to work outside.
++- Getting into causal inference during nightime, at the moment by going through [[the-effect|The Effect]].</code></pre>]]></description>
+        </item>
+        <item>
+            <title>Diff for Weeknotes</title>
+            <link>/weeknotes.html</link>
+            <guid isPermaLink="true">/weeknotes.html</guid>
+            <pubDate>Fri, 20 Mar 2026 21:50:16 +0000</pubDate>
+            <description><![CDATA[<pre><code>+---
++title: Weeknotes
++created_date: 22/02/2025
++publish: true
++tags:
++  - forward-slash
++---
++This is the archive for the weeknotes.
++## 2026
++
++Week numbers: 01 02 03 04 05 06 07 08 09 10 11 [[weeknotes-202612]] 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52
++
++## 2025
++
++Week numbers: 01 02 03 04 05 06 [[weeknotes-202507|07]] [[weeknotes-202508|08]] 09 [[weeknotes-202510|10]] [[weeknotes-202511|11]] 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52</code></pre>]]></description>
+        </item>
+        <item>
+            <title>Diff for Weeknotes 202511</title>
+            <link>/weeknotes-202511.html</link>
+            <guid isPermaLink="true">/weeknotes-202511.html</guid>
+            <pubDate>Fri, 20 Mar 2026 21:50:16 +0000</pubDate>
+            <description><![CDATA[<pre><code>+---
++title: Weeknotes 202511
++created_date: 16/03/2025
++publish: true
++category: weeknote
++---
++
++- It was today the first Formula 1 Grand Prix of the season in Melbourne. I’m watching it as I write this week’s notes. It is being quite entertaining. The McLaren seems to be the class of the field, confirming the suspicions of the pre-season testing. It seems this year’s car is very good at not putting too much strain in the tires, slowing the rate of decay in performance and allowing the drivers to push for longer.
++- I was confident at the end of last year that very soon I’d have more time and energy because nights with the 1 year old were going to improve but it’s already mid-March and it seems the year is flying by and I haven’t crossed anything from the 2025 objectives yet.
++- I have been listening to the remix of Severance soundtrack, [Music To Refine To](https://www.youtube.com/watch?v=JRnDYB28bL8), while working and it’s pretty good. I’ve never watched the show but everything I’ve seen about it looks great, right up my alley. On the other hand, I get the sense it would be a depressing watch as the premise hits too close to home.
++- There’ll be more next week - see you then!
+\ No newline at end of file</code></pre>]]></description>
+        </item>
+        <item>
+            <title>Diff for Weeknotes 202508</title>
+            <link>/weeknotes-202508.html</link>
+            <guid isPermaLink="true">/weeknotes-202508.html</guid>
+            <pubDate>Fri, 20 Mar 2026 21:50:16 +0000</pubDate>
+            <description><![CDATA[<pre><code>+---
++title: Weeknotes 202508
++created_date: 23/02/2025
++publish: true
++category: weeknote
++---
++- Cold symptoms carried over from last week and turned into something quite annoying.
++- Ended up not doing my weekly pilgrimage to the Paddington office, which I enjoy, to avoid spreading viral load and hopefully to recover quicker.
++- Added some polish to the [[colophon|wiki]]. The front page is improved and the layout in mobile should feel a bit more comfortable.
++- It’s half-term week here in the UK and that usually means juggling a bit more family stuff but this time we’ve booked holiday clubs with decent open and closing times so it has worked well.
++- We are going to spend a week in Lisbon around Easter but we need to nail those dates down so that we can start organising the trip.
++- [Obsidian is now free for commercial use](https://obsidian.md/blog/free-for-work/), so I can move away from OneNote at work, which I’ve been using since I’ve been given a slap on the wrist for using [[Obsidian]] without a licence a while ago.
++- I find it hard to believe things got to this point but [Apple disabled E2E encryption for some of their services for UK users](https://www.theverge.com/news/617273/apple-removes-encryption-advanced-data-protection-adp-uk-spying-backdoor).
++- Looking forward for the next week, cold symptoms-free!
+\ No newline at end of file</code></pre>]]></description>
+        </item>
+        <item>
+            <title>Diff for Weeknotes 202510</title>
+            <link>/weeknotes-202510.html</link>
+            <guid isPermaLink="true">/weeknotes-202510.html</guid>
+            <pubDate>Fri, 20 Mar 2026 21:50:16 +0000</pubDate>
+            <description><![CDATA[<pre><code>+---
++title: Weeknotes 202510
++created_date: 09/03/2025
++publish: true
++category: weeknote
++---
++
++- It’s March, the meteorological spring has started, the weather has been lovely in this part of the planet. After the snow bells, crocuses and daffodils are everywhere and cherry trees are blossoming.
++- There was Formula 1 pre-season testing in Bahrain and this week we have the first race of the season in Melbourne. I have a lot to say about this but will spare my readership and just write a few commonplace ideas: the last season before major changes in regulation is usually the best with performance convergence across the field, where usually everyone asks themselves *Why are we changing the formula if this is so good?*. On the other hand, McLaren seems to have made another step forward in performance — still to be confirmed — and this season could be a duel between Norris and Piastri, reminiscent of Hamilton vs Rosberg in 2014. 
++- I’ve ordered a [Keychron K1 Pro](https://www.keychron.uk/products/keychron-k1-pro-qmk-via-wireless-custom-mechanical-keyboard-iso-layout-collection?variant=45743748022442) with PBT keycaps and brown switches. Since I spend so much time typing, thought it would be nice to use something substantially better than the £20 mechanical keyboard I’ve been using in the past few years. It’s all about the small pleasures.
++- We used to slog almost 7 months straight after the Christmas break and spend the first holiday period around the end of June but for the first time in 18 years we’ll be spending Easter in Lisbon, to better align with the school holidays. I think it’s great.
++- Wish you all a fantastic week!
+\ No newline at end of file</code></pre>]]></description>
+        </item>
+        <item>
+            <title>Diff for RSS</title>
+            <link>/rss.html</link>
+            <guid isPermaLink="true">/rss.html</guid>
+            <pubDate>Fri, 20 Mar 2026 21:50:16 +0000</pubDate>
+            <description><![CDATA[<pre><code>+---
++title: RSS
++publish: true
++tags:
++  - forward-slash
++---
++Currently we have two feeds
++
++- Weeknotes only - [rss](weeknotes.rss)
++- Site-wide diff log - [rss](difflog.rss)
+\ No newline at end of file</code></pre>]]></description>
+        </item>
+        <item>
+            <title>Diff for Pixelbook</title>
+            <link>/pixelbook.html</link>
+            <guid isPermaLink="true">/pixelbook.html</guid>
+            <pubDate>Fri, 20 Mar 2026 21:50:16 +0000</pubDate>
+            <description><![CDATA[<pre><code>+---
++title: Pixelbook
++created_date: 21/09/2023
++publish: true
++tags:
++  - device
++---
++The Pixelbook was an ultrabook launched on 2017 by Google, running [[ChromeOS]]. It had 6 years of software support and mine expired in June 2024. I have decided to [[ubuntu-on-pixelbook|wipe it and install Ubuntu on it]] around September 2023.
++
++![[Pasted image 20230921232931.png]]
++Photo by Google.
++
++I've been a happy user of a Google Pixelbook for a few years. It has brilliant hardware and software. It's not a regular laptop, as it uses [[ChromeOS]] as an operating system. I would describe it as a computer for the mobile phone age: instantly on, simple, user friendly, very low maintenance and it Just Works. This might not be a big deal in 2023 but, in 2017, I can assure you it was.
++
++Unfortunately, as for other main vendors, it also has finite software support from the vendor. Every [[ChromeOS]] device has an expiration date, when it's no longer possible to install any updates. This wouldn't be necessarily a problem for 'regular' operating systems, where we can at least keep the apps up to date. In ChromeOS, the Chrome browser is a central part of the operating system and can't be installed externally. This means, after the laptop expires, it will continue to function but it will not get the latest features and, more importantly, it will no longer receive the latest security patches, thus potentially exposing private data or be exposed to other attacks. 
++
++It is possible to install Android Chrome from the Google Play store or install desktop Linux Chrome from the Crostini container but none of these would provide a first-class experience and important integration with the rest of the operating system would be lost. Interestingly, it is possible to have a lifetime of well supported Chrome in a device using any other operating system but not on a Google device, with a Google operating system.
++
++https://bugzilla.kernel.org/show_bug.cgi?id=220705
+\ No newline at end of file</code></pre>]]></description>
+        </item>
+    </channel>
+</rss>

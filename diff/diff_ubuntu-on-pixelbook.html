@@ -1,0 +1,128 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, user-scalable=yes"
+        />
+        <meta
+            name="fediverse:creator"
+            content="@varelasaraiva@mastodon.social"
+        />
+        <title>VS.com - Diff log for Ubuntu on Pixelbook</title>
+        <link rel="alternate" type="application/rss+xml" title="Weeknotes" href="../weeknotes.rss" />
+        <link rel="alternate" type="application/rss+xml" title="Diff Log" href="../difflog.rss" />
+        <link rel="stylesheet" href="../css/single.css" />
+        <!--[if lt IE 9]>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <div id="bar">
+            <div id="bar2">Diff log for Ubuntu on Pixelbook - <a href="../index.html">Home</a></div>
+        </div>
+        <div id="container">
+            <div id="header">
+                <div id="title">Diff log for Ubuntu on Pixelbook</div>
+                <span id="metadata">
+                    <a href="../ubuntu-on-pixelbook.html">Return to page</a>
+                </span>
+            </div>
+            <div id="content">
+                
+                <div class="diff-entry">
+                    <h3>2026-03-20 21:50:16</h3>
+                    <pre><code>+---
++title: Ubuntu on Pixelbook
++created_date: 21/09/2023
++publish: true
++tags:
++  - device
++  - tutorial
++---
++*Disclaimer: This article should now be obsolete. If you think the information is still valid and links to external URLs have not rotted yet, do not follow this tutorial if you cannot afford losing your Pixelbook. I accept no liability for any loss. Posting questions in the subreddit [r/chrultrabook](https://reddit.com/r/chrultrabook) is your best chance of getting expert help.*
++
++## Introduction
++
++My [[pixelbook|Google Pixelbook]] expires on June 2024. I have decided I will not replace the hardware, so to replace [[ChromeOS]], I have to reflash the BIOS, format partitions and install Linux. I could do this next year but I actually missed using Linux and [[GNOME]] as my daily driver after years with [[ChromeOS]] and i3.
++
++I didn't expect an easy setup but I expected a stable experience once it was set up. This article describes how I've managed to install and use [[Ubuntu]] on a [[pixelbook|Google Pixelbook]] as it's sole operating system. Beware, it's not for the faint of heart.
++
++## Preparation
++
++Besides thorough research, I personally didn't spend too much time preparing, possibly because [[ChromeOS]] is very oriented towards using the Google services and the Google Drive, so most of the data was already located in the cloud. 
++
++In any case, I would suggest backing up all your local data to the Google Drive. It should be a matter of dragging and dropping folders in the file manager. Make sure you let the folders sync completely with the cloud otherwise, once the user data is erased, the data will be lost.
++
++Secondly, we need to create a bootable USB stick with a Linux distribution ISO installer. I have chosen [[Ubuntu]] Desktop 22.04 LTS for this case. I have used another Linux machine to download the ISO and burn it to the USB stick. Once the ISO was downloaded, I ran the command below to create the bootable USB stick:
++
++
++```bash
++dd if=Downloads/ubuntu-22.04.3-desktop-amd64.iso of=/dev/sdb bs=4M status=progress conv=fdatasync
++```
++
++The device to use in the `of` field - `/dev/sdb`  in my case - should be obvious by running `lsblk` in the terminal. I used an adapter between USB-A and USB-C to plug the USB stick to the [[pixelbook]]. There are many other ways of creating a bootable USB stick. In Windows, Rufus seems to be a popular choice. I've read reports selecting the 'dd image' mode is important later on.
++
++Now, on to the hard stuff.
++
++## Developer mode
++
++Despite of [[ChromeOS]] being Linux under the bonnet, the [[pixelbook|Google Pixelbook]] is very well locked up and secure. It has proprietary BIOS, firmwares, etc. Therefore, it's not possible by default to sideload an installer of an alternative operating system and install it side by side or in place of ChromeOS. One has to get access and reflash the ROM with an open BIOS like Coreboot to be able to do so. 
++
++I have used the Firmware Utility Script by [MrChromebox](https://twitter.com/mrchromebox) described in [his site](https://mrchromebox.tech) to install the firmware. This script must be run in the `crosh` terminal. The terminal in the `crostini` container does not have full access to the hardware, so it's impossible to flash the ROM from there. To get access to the `crosh` shell, the [[pixelbook]] must be in developer mode. One of the side effects of enabling the developer mode is essentially doing a factory reset to the [[pixelbook]], so at this point you should be prepared to erase all local data. 
++
++The developer mode is accessed via the recovery menu. To reboot to recovery, press and hold `Esc + Refresh` and then press the power button. Once you see the recovery menu, you can let go of `Esc + Refresh`, as described [here](https://support.google.com/pixelbook/answer/9134768?hl=en#zippy=%2Cstep-enter-recovery-mode) in step 3. To enable developer mode, press `Ctrl + D` and confirm, as described [here](https://mrchromebox.tech/#devmode).
++
++The next time the [[pixelbook]] is started, it will show a welcome screen like it's being switched on for the first time. I believe the `crosh` terminal can be invoked from the first screen with a `Ctrl + Alt + T`. Otherwise, you'll have to configure an account, login normally and finally invoke `crosh` using the same combination from there.
++
++## Removing write protection and flashing BIOS
++
++Unfortunately, we can't just run the script and flash the ROM, as the ROM is write-protected at hardware-level. To disable the write protection, we have to simply disconnect the battery, a process that involves removing the back panel - where the battery is glued on - and disconnecting a flat cable from the motherboard, a process very well described in [this iFixit article](https://www.ifixit.com/Guide/Google+Pixelbook+Battery+(Back+Panel)+Replacement/103036). 
++
++It's understandable if you don't feel confident proceeding with this madness. At this point, you can still boot to recovery, disable developer mode and restart normally to [[ChromeOS]]. There is [another method](https://wiki.mrchromebox.tech/Firmware_Write_Protect#Disabling_WP_on_CR50_Devices_via_CCD) described in MrChromebox's website that should be less invasive but requires a special debug USB cable, which I have not tried.
++
++Assuming my readership was brave enough to go ahead with opening the Pixelbook and disconnecting the battery, it is possible now to start the Pixelbook, launch the `crosh` with `Ctrl + Alt + T`, type `shell`, launch the Firmware Utility Script with 
++
++```bash
++cd; curl -LO mrchromebox.tech/firmware-util.sh && sudo bash firmware-util.sh
++``` 
++
++as described in [here](https://mrchromebox.tech/#fwscript), and select `Install/Update UEFI (Full ROM) Firmware`. This is the last time you'll see [[ChromeOS]] in this [[pixelbook]], before shutting down.
++
++The battery can now be reconnected to the motherboard and the back panel reattached, to enable write-protection again.
++
++## Installing Ubuntu and mitigating some quirks
++
++In the next reboot, you'll be greeted with the Coreboot logo. Chances are that you've rebooted with the USB stick plugged in but it is not being detected in the Coreboot boot menu. The solution for me was to go back to the main/root menu, unplug the USB stick, wait a couple of seconds, plug it back again, wait ~3 seconds and check the boot menu again. It didn't work straight way with me and this could be quite distressing until it works.
++
++Once you'll see an USB-related entry in the boot menu and select it, things will then become quite familiar if you've installed [[Ubuntu]] before. In my case, during the whole installation process, the picture was flipped upside down. This shouldn't prevent completing the installation, if we ignore the awkwardness. In the first boot after the installation the picture was oriented correctly.
++
++By now, you should have everything working except, I think, sound and the top row of the keyboard. I have not tested whether input events from the stylus are being recognised but intend to do so soon. It would be great if the stylus still worked with it for some ad-hoc whiteboarding.
++
++To fix the sound and the keyboard, I have followed [this thread](https://reddit.com/r/chrultrabook/s/j4oRatD9Aw) in Reddit. The important part entails installing the packages `pixelbook-alsa` and `pixelbook-keybd` from [this folder](https://drive.google.com/drive/folders/1POOaM7r1TnH_p7ONHPNFnFeIrFtueFw_) in Google Drive. I have not tried the `pixelbook-sensors` package. Sound and keyboard should now work out of the box.
++
++The only issue I have at the moment is, whenever I plug headphones in or out, the sound device is not switched automatically. It has to be done manually in the Settings > Sound dialogue, which is a bit a annoying. I'll try to fix this issue once [[Ubuntu]] 23.10 comes out.
++
++Other than that, it has been running quite stable so far, [[GNOME]] is a very polished experience and, in the age of PWAs and the cloud, I don't feel limited in any way. It would be great to have more than 8 GB of RAM for more browser tabs.
+\ No newline at end of file</code></pre>
+                </div>
+                
+            </div>
+
+            <div
+                id="endmark"
+                style="
+                    text-align: center;
+                    color: #ccc;
+                    margin-top: 30px;
+                    font-size: 2rem;
+                "
+            >
+                ␄
+            </div>
+            <div id="footer">© 2023-2026 Pedro Varela Saraiva</div>
+        </div>
+    </body>
+</html>
