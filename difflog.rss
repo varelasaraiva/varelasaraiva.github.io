@@ -6,7 +6,7 @@
         <description>A log of changes to the site content</description>
         <atom:link href="/difflog.rss" rel="self" type="application/rss+xml" />
         <item>
-            <title>Uses</title>
+            <title>/uses</title>
             <link>/uses.html</link>
             <guid isPermaLink="true">/uses.html</guid>
             <pubDate>Thu, 26 Mar 2026 16:19:21 +0000</pubDate>
@@ -169,7 +169,7 @@
 \ No newline at end of file</code></pre>]]></description>
         </item>
         <item>
-            <title>Weeknotes</title>
+            <title>/weeknotes</title>
             <link>/weeknotes.html</link>
             <guid isPermaLink="true">/weeknotes.html</guid>
             <pubDate>Fri, 20 Mar 2026 21:50:16 +0000</pubDate>
@@ -239,7 +239,7 @@
 \ No newline at end of file</code></pre>]]></description>
         </item>
         <item>
-            <title>RSS</title>
+            <title>/rss</title>
             <link>/rss.html</link>
             <guid isPermaLink="true">/rss.html</guid>
             <pubDate>Fri, 20 Mar 2026 21:50:16 +0000</pubDate>
