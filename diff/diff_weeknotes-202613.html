@@ -1,0 +1,65 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, user-scalable=yes"
+        />
+        <meta
+            name="fediverse:creator"
+            content="@varelasaraiva@mastodon.social"
+        />
+        <title>VS.com - Diff log for Weeknotes 202613</title>
+        <link rel="alternate" type="application/rss+xml" title="Weeknotes" href="../weeknotes.rss" />
+        <link rel="alternate" type="application/rss+xml" title="Diff Log" href="../difflog.rss" />
+        <link rel="stylesheet" href="../css/single.css" />
+        <!--[if lt IE 9]>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <div id="bar">
+            <div id="bar2">Diff log for Weeknotes 202613 - <a href="../index.html">Home</a></div>
+        </div>
+        <div id="container">
+            <div id="header">
+                <div id="title">Diff log for Weeknotes 202613</div>
+                <span id="metadata">
+                    <a href="../weeknotes-202613.html">Return to page</a>
+                </span>
+            </div>
+            <div id="content">
+                
+                <div class="diff-entry">
+                    <h3>2026-03-31 19:34:49</h3>
+                    <pre><code>+---
++title: Weeknotes 202613
++category: weeknote
++publish: true
++---
++- The site is still in beta. I haven't had the time to address what is still pending because...
++- Last week was different because A. got hands, foot and mouth for the third time and had to stay at home recovering for two days, with my wife and I alternating with the nursing duties. Because she had a blocked nose, A. did not sleep much due to the troubled breathing, so we ended the week exhausted. Things are coming back to normal.
++- I finally seem to have solved a problem with the [[Pixelbook]] that has been nagging me since I've started using Linux on it. The variant with an Intel Core i5 CPU (the one I have) doesn't have a modern SSD; it has an eMMC, which is basically an SD card soldered to the motherboard that can only do one operation at a time. This means the system is very limited in terms of I/O. When running I/O intensive tasks like e.g. upgrading the system, that completely saturates the system and even low level events like refreshing what is displayed on the screen or moving the mouse cursor around has to wait. This means that sometimes, especially when these processes would run unattended in the background, the laptop would freeze for minutes on end, rendering it completely unusable. The solution is mainly using a kernel scheduler that deprioritises this sort of tasks and reserves resource for anything essential. This way, even if these I/O heavy tasks may take longer to complete, you can ensure that your system will always be responsive. I may add something about this soon, in a page somewhere.
++- We've got to the end of the first quarter of the year, surely surprising many skeptics. It's time to look again at the yearly objectives and make sure things don't start to slide.
+\ No newline at end of file</code></pre>
+                </div>
+                
+            </div>
+
+            <div
+                id="endmark"
+                style="
+                    text-align: center;
+                    color: #ccc;
+                    margin-top: 30px;
+                    font-size: 2rem;
+                "
+            >
+                ␄
+            </div>
+            <div id="footer">© 2023-2026 Pedro Varela Saraiva</div>
+        </div>
+    </body>
+</html>
