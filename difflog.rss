@@ -10,19 +10,8 @@
             <link>/weeknotes-202620.html</link>
             <guid isPermaLink="true">/weeknotes-202620.html</guid>
             <pubDate>Tue, 19 May 2026 19:09:19 +0000</pubDate>
-            <description><![CDATA[<pre><code>+---
-+title: Weeknotes 202620
-+category: weeknote
-+publish: true
-+---
-+- The girls are asleep. I came online and thought about saying hi.
-+- Did I really write that I was going to have some interesting weeks ahead??
-+- Beyond the cosmological, has anything more mundane happened? Let me see.
-+- The joys of assembling flat-packed furniture, once again. We configured a [Tylko](https://tylko.com) bookshelf on their website (#MyTylko in the socials) and had it delivered all the way from Poland. We're happy with the purchase; the living room looks a bit more civilised now.
-+- H. had her first tooth fall out. It wasn't gory at all.
-+- A's tricycle was delivered in the meantime. It was initially ignored, as her sister's scooter was still the centre of her life, but with some insistence, it seems to be her first choice now—much to my relief.
-+- We're taking a break during the half-term and spending the week in Portugal. A different airport and airline this time, and we've rented an Airbnb for the first time. Let's see how it goes.
-\ No newline at end of file</code></pre>]]></description>
+            <description><![CDATA[<pre><code>-- Beyond the cosmological, has anything more mundane happened? Let me see.
++- Besides the cosmological, has anything more mundane happened? Let me see.</code></pre>]]></description>
         </item>
         <item>
             <title>Weeknotes 202615</title>
@@ -86,36 +75,7 @@
             <link>/following.html</link>
             <guid isPermaLink="true">/following.html</guid>
             <pubDate>Thu, 26 Mar 2026 16:19:21 +0000</pubDate>
-            <description><![CDATA[<pre><code>-publish: false
-+publish: true
--- Alice Bartlett 
--- Phil Gyford
--- Giles Turnbull
--- Andrew Doran
--- Derek Sivers
--- Vicki Boykis
--- Vincent Warmerdam
--- Matt Webb
--- Maggie Appleton
--- Sophia Koonin
--- Marginal Revolution 
--- Pluralistic
--- The Marginalian
--- Kottke
-+- [Alice Bartlett](https://alicebartlett.co.uk/) 
-+- [Phil Gyford](https://www.gyford.com)
-+- [Giles Turnbull](https://gilest.org)
-+- [Andrew Doran](https://andrewdoran.uk/blog/)
-+- [Derek Sivers](https://sive.rs/)
-+- [Vicki Boykis](https://vickiboykis.com/)
-+- [Vincent Warmerdam](https://koaning.io/)
-+- [Joel Grus](https://joelgrus.com/)
-+- [Matt Webb](https://interconnected.org/home/)
-+- [Maggie Appleton](https://maggieappleton.com/)
-+- [Sophie Koonin](https://localghost.dev/)
-+- [Marginal Revolution](https://marginalrevolution.com/)
-+- [Cory Doctorow](https://pluralistic.net/)
-+- [The Marginalian](https://www.themarginalian.org/)</code></pre>]]></description>
+            <description><![CDATA[<pre><code>-- [Derek Sivers](https://sive.rs/)</code></pre>]]></description>
         </item>
         <item>
             <title>Ubuntu on Pixelbook</title>
