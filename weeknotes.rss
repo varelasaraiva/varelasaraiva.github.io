@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>varelasaraiva.com Weeknotes</title>
-        <link>/</link>
+        <link>https://varelasaraiva.com/</link>
         <description>A collection of weeknotes</description>
-        <atom:link href="/weeknotes.rss" rel="self" type="application/rss+xml" />
+        <atom:link href="https://varelasaraiva.com/weeknotes.rss" rel="self" type="application/rss+xml" />
         <item>
             <title>Weeknotes 202620</title>
-            <link>/weeknotes-202620.html</link>
-            <guid isPermaLink="true">/weeknotes-202620.html</guid>
+            <link>https://varelasaraiva.com/weeknotes-202620.html</link>
+            <guid isPermaLink="true">https://varelasaraiva.com/weeknotes-202620.html</guid>
             <pubDate>Tue, 19 May 2026 19:09:19 +0000</pubDate>
             <description><![CDATA[<ul>
 <li>The girls are asleep. I came online and thought about saying hi.</li>
@@ -23,12 +23,12 @@
         </item>
         <item>
             <title>Weeknotes 202615</title>
-            <link>/weeknotes-202615.html</link>
-            <guid isPermaLink="true">/weeknotes-202615.html</guid>
+            <link>https://varelasaraiva.com/weeknotes-202615.html</link>
+            <guid isPermaLink="true">https://varelasaraiva.com/weeknotes-202615.html</guid>
             <pubDate>Sun, 12 Apr 2026 22:42:14 +0000</pubDate>
             <description><![CDATA[<ul>
 <li>It was the second week of Easter holidays for H. and we decided to take the week off and spend it in the Center Parcs in the Elveden Forest, Suffolk.</li>
-<li>It is very much part of the family holidays industrial-complex and it is very formatted but we liked the format and would definitely go back again. Two and five year olds are only able to enjoy about a tenth of what is on offer, so there is still lots replayability potential.</li>
+<li>It is very much part of the family holidays industrial-complex and it is very formatted but we liked the format and would definitely go back again. Two and five year olds are only able to enjoy about a tenth of what is on offer, so there is still lots of replayability potential.</li>
 <li>H. definitely had a blast: &quot;Best holidays ever!&quot;. Good, that's what we want to hear.</li>
 <li>I was hoping to do loads of stuff and move the site from beta to something more stable and complete in the late evenings whilst staying there but the competition from reading The Screwtape Letters and watching the end of the season 3 of The Chosen (mostly this), meant things are pretty much in the same state. No worries, we'll get there soon.</li>
 <li>Placed an order for a tricycle for our two year old A., who is a bit of a Schumacher, and another helmet for H., one size up.</li>
@@ -38,8 +38,8 @@
         </item>
         <item>
             <title>Weeknotes 202614</title>
-            <link>/weeknotes-202614.html</link>
-            <guid isPermaLink="true">/weeknotes-202614.html</guid>
+            <link>https://varelasaraiva.com/weeknotes-202614.html</link>
+            <guid isPermaLink="true">https://varelasaraiva.com/weeknotes-202614.html</guid>
             <pubDate>Sun, 12 Apr 2026 22:42:14 +0000</pubDate>
             <description><![CDATA[<ul>
 <li>The first week of H's Easter holidays. H. went to holiday club on work days, which worked reasonably well. The only downside was the pickup at 1630, meaning that work was somewhat disrupted from that time onwards. I tried to compress the days as much as possible and I think that worked well.</li>
@@ -50,21 +50,21 @@
         </item>
         <item>
             <title>Weeknotes 202613</title>
-            <link>/weeknotes-202613.html</link>
-            <guid isPermaLink="true">/weeknotes-202613.html</guid>
+            <link>https://varelasaraiva.com/weeknotes-202613.html</link>
+            <guid isPermaLink="true">https://varelasaraiva.com/weeknotes-202613.html</guid>
             <pubDate>Tue, 31 Mar 2026 19:34:49 +0000</pubDate>
             <description><![CDATA[<ul>
 <li>The site is still in beta. I haven't had the time to address what is still pending because...</li>
 <li>Last week was different because A. got hands, foot and mouth for the third time and had to stay at home recovering for two days, with my wife and I alternating with the nursing duties. Because she had a blocked nose, A. did not sleep much due to the troubled breathing, so we ended the week exhausted. Things are coming back to normal.</li>
-<li>I finally seem to have solved a problem with the [[Pixelbook]] that has been nagging me since I've started using Linux on it. The variant with an Intel Core i5 CPU (the one I have) doesn't have a modern SSD; it has an eMMC, which is basically an SD card soldered to the motherboard that can only do one operation at a time. This means the system is very limited in terms of I/O. When running I/O intensive tasks like e.g. upgrading the system, that completely saturates the system and even low level events like refreshing what is displayed on the screen or moving the mouse cursor around has to wait. This means that sometimes, especially when these processes would run unattended in the background, the laptop would freeze for minutes on end, rendering it completely unusable. The solution is mainly using a kernel scheduler that deprioritises this sort of tasks and reserves resource for anything essential. This way, even if these I/O heavy tasks may take longer to complete, you can ensure that your system will always be responsive. I may add something about this soon, in a page somewhere.</li>
+<li>I finally seem to have solved a problem with the <a href="https://varelasaraiva.com/pixelbook.html" class="internal-link">Pixelbook</a> that has been nagging me since I've started using Linux on it. The variant with an Intel Core i5 CPU (the one I have) doesn't have a modern SSD; it has an eMMC, which is basically an SD card soldered to the motherboard that can only do one operation at a time. This means the system is very limited in terms of I/O. When running I/O intensive tasks like e.g. upgrading the system, that completely saturates the system and even low level events like refreshing what is displayed on the screen or moving the mouse cursor around has to wait. This means that sometimes, especially when these processes would run unattended in the background, the laptop would freeze for minutes on end, rendering it completely unusable. The solution is mainly using a kernel scheduler that deprioritises this sort of tasks and reserves resource for anything essential. This way, even if these I/O heavy tasks may take longer to complete, you can ensure that your system will always be responsive. I may add something about this soon, in a page somewhere.</li>
 <li>We've got to the end of the first quarter of the year, surely surprising many skeptics. It's time to look again at the yearly objectives and make sure things don't start to slide.</li>
 </ul>
 ]]></description>
         </item>
         <item>
             <title>Weeknotes 202511</title>
-            <link>/weeknotes-202507.html</link>
-            <guid isPermaLink="true">/weeknotes-202507.html</guid>
+            <link>https://varelasaraiva.com/weeknotes-202507.html</link>
+            <guid isPermaLink="true">https://varelasaraiva.com/weeknotes-202507.html</guid>
             <pubDate>Fri, 20 Mar 2026 21:50:16 +0000</pubDate>
             <description><![CDATA[<ul>
 <li>It was today the first Formula 1 Grand Prix of the season in Melbourne. I’m watching it as I write this week’s notes. It is being quite entertaining. The McLaren seems to be the class of the field, confirming the suspicions of the pre-season testing. It seems this year’s car is very good at not putting too much strain in the tires, slowing the rate of decay in performance and allowing the drivers to push for longer.</li>
@@ -76,13 +76,13 @@
         </item>
         <item>
             <title>Weeknotes 202612</title>
-            <link>/weeknotes-202612.html</link>
-            <guid isPermaLink="true">/weeknotes-202612.html</guid>
+            <link>https://varelasaraiva.com/weeknotes-202612.html</link>
+            <guid isPermaLink="true">https://varelasaraiva.com/weeknotes-202612.html</guid>
             <pubDate>Fri, 20 Mar 2026 21:50:16 +0000</pubDate>
             <description><![CDATA[<blockquote>
 <p>There’ll be more next week - see you then!</p>
 </blockquote>
-<p>... And in the end, there was not more [[weeknotes-202511|next week]] or anything else for over a year. To cut the story short, because this is not a 2025 review, life happened. 2025 was not a bad year, by any means, but it was a hard working year. Normal parenting stuff - nothing out of the ordinary. Years usually start optimistically and I was convinced A's sleeping patterns would improve like H's around the second year and we, the parents, would be less sleep deprived, but this time it was different.</p>
+<p>... And in the end, there was not more <a href="https://varelasaraiva.com/weeknotes-202511.html" class="internal-link">next week</a> or anything else for over a year. To cut the story short, because this is not a 2025 review, life happened. 2025 was not a bad year, by any means, but it was a hard working year. Normal parenting stuff - nothing out of the ordinary. Years usually start optimistically and I was convinced A's sleeping patterns would improve like H's around the second year and we, the parents, would be less sleep deprived, but this time it was different.</p>
 <p>I have been planning (in my mind) a rewrite of the static site generator for most of 2025 and I finally decided to roll up my sleeves during the Christmas break. The main new features are</p>
 <ol>
 <li>Incremental builds</li>
@@ -95,8 +95,8 @@
         </item>
         <item>
             <title>Weeknotes 202511</title>
-            <link>/weeknotes-202511.html</link>
-            <guid isPermaLink="true">/weeknotes-202511.html</guid>
+            <link>https://varelasaraiva.com/weeknotes-202511.html</link>
+            <guid isPermaLink="true">https://varelasaraiva.com/weeknotes-202511.html</guid>
             <pubDate>Fri, 20 Mar 2026 21:50:16 +0000</pubDate>
             <description><![CDATA[<ul>
 <li>It was today the first Formula 1 Grand Prix of the season in Melbourne. I’m watching it as I write this week’s notes. It is being quite entertaining. The McLaren seems to be the class of the field, confirming the suspicions of the pre-season testing. It seems this year’s car is very good at not putting too much strain in the tires, slowing the rate of decay in performance and allowing the drivers to push for longer.</li>
@@ -108,16 +108,16 @@
         </item>
         <item>
             <title>Weeknotes 202508</title>
-            <link>/weeknotes-202508.html</link>
-            <guid isPermaLink="true">/weeknotes-202508.html</guid>
+            <link>https://varelasaraiva.com/weeknotes-202508.html</link>
+            <guid isPermaLink="true">https://varelasaraiva.com/weeknotes-202508.html</guid>
             <pubDate>Fri, 20 Mar 2026 21:50:16 +0000</pubDate>
             <description><![CDATA[<ul>
 <li>Cold symptoms carried over from last week and turned into something quite annoying.</li>
 <li>Ended up not doing my weekly pilgrimage to the Paddington office, which I enjoy, to avoid spreading viral load and hopefully to recover quicker.</li>
-<li>Added some polish to the [[colophon|wiki]]. The front page is improved and the layout in mobile should feel a bit more comfortable.</li>
+<li>Added some polish to the <a href="https://varelasaraiva.com/colophon.html" class="internal-link">wiki</a>. The front page is improved and the layout in mobile should feel a bit more comfortable.</li>
 <li>It’s half-term week here in the UK and that usually means juggling a bit more family stuff but this time we’ve booked holiday clubs with decent open and closing times so it has worked well.</li>
 <li>We are going to spend a week in Lisbon around Easter but we need to nail those dates down so that we can start organising the trip.</li>
-<li><a href="https://obsidian.md/blog/free-for-work/">Obsidian is now free for commercial use</a>, so I can move away from OneNote at work, which I’ve been using since I’ve been given a slap on the wrist for using [[Obsidian]] without a licence a while ago.</li>
+<li><a href="https://obsidian.md/blog/free-for-work/">Obsidian is now free for commercial use</a>, so I can move away from OneNote at work, which I’ve been using since I’ve been given a slap on the wrist for using <a href="https://varelasaraiva.com/obsidian.html" class="internal-link">Obsidian</a> without a licence a while ago.</li>
 <li>I find it hard to believe things got to this point but <a href="https://www.theverge.com/news/617273/apple-removes-encryption-advanced-data-protection-adp-uk-spying-backdoor">Apple disabled E2E encryption for some of their services for UK users</a>.</li>
 <li>Looking forward for the next week, cold symptoms-free!</li>
 </ul>
@@ -125,8 +125,8 @@
         </item>
         <item>
             <title>Weeknotes 202510</title>
-            <link>/weeknotes-202510.html</link>
-            <guid isPermaLink="true">/weeknotes-202510.html</guid>
+            <link>https://varelasaraiva.com/weeknotes-202510.html</link>
+            <guid isPermaLink="true">https://varelasaraiva.com/weeknotes-202510.html</guid>
             <pubDate>Fri, 20 Mar 2026 21:50:16 +0000</pubDate>
             <description><![CDATA[<ul>
 <li>It’s March, the meteorological spring has started, the weather has been lovely in this part of the planet. After the snow bells, crocuses and daffodils are everywhere and cherry trees are blossoming.</li>
