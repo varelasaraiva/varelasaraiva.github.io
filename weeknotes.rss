@@ -6,16 +6,29 @@
         <description>A collection of weeknotes</description>
         <atom:link href="https://varelasaraiva.com/weeknotes.rss" rel="self" type="application/rss+xml" />
         <item>
+            <title>Weeknotes 202623</title>
+            <link>https://varelasaraiva.com/weeknotes-202623.html</link>
+            <guid isPermaLink="true">https://varelasaraiva.com/weeknotes-202623.html</guid>
+            <pubDate>Sun, 07 Jun 2026 23:12:02 +0000</pubDate>
+            <description><![CDATA[<ul>
+<li>At work, I hit the ground running on Monday, having prepared myself for it during the break, and had a mountain to catch up on as soon as I arrived. In our team, we are working frantically towards an important mid-June delivery and needs must.</li>
+<li>I was faced with doing a ~350 TB SQL query (~£1,600) to get to one of our objectives. It's not going to happen, so I will have to come up with a creative solution next week, which honestly is the sort of stuff that makes me get out of bed in the morning, go through the brutal battle of getting the girls ready to go out in a timely fashion, and walk across the landing to the home office, anyway.</li>
+<li>H. perfected her impersonation of a line we like by a minor character of a well-known cartoon show. It's brilliant—one of the funniest things in the world right now.</li>
+<li><a href="https://gilest.org/doingweeknotes/">Weeknotes</a> are supposed to be a quick, raw stream of consciousness, but even so, I need to start doing some basic proofreading before I publish.</li>
+</ul>
+]]></description>
+        </item>
+        <item>
             <title>Weeknotes 202622</title>
             <link>https://varelasaraiva.com/weeknotes-202622.html</link>
             <guid isPermaLink="true">https://varelasaraiva.com/weeknotes-202622.html</guid>
             <pubDate>Thu, 28 May 2026 23:59:28 +0000</pubDate>
             <description><![CDATA[<ul>
 <li>It seems we've avoided some toasty days in the UK. The temperatures haven't been that different in Lisbon, but it's far more tolerable here. How come Estoril is 23 km from Lisbon but it's always 4 C colder? Is it the ocean breeze?</li>
-<li>I could have spent my late evenings more unwisely than by reading the entire latest encyclical letter by Pope Leo XIV (via, e.g., <a href="https://simonwillison.net/2026/May/25/encyclical-on-ai/">Simon Willison</a>). That is an understatement, of course; I thought the reflection about what sort of post-AI world we'd rather have and his view that when we apply AI (or any other technology), we should optimise for the dignity of the human person was very pertinent.</li>
+<li>I could have spent my late evenings more unwisely than by reading the entire latest <a href="https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html">encyclical letter</a> by Pope Leo XIV (via, e.g., <a href="https://simonwillison.net/2026/May/25/encyclical-on-ai/">Simon Willison</a>). That is an understatement, of course; I thought the reflection about what sort of post-AI world we'd rather have and his view that when we apply AI (or any other technology), we should optimise for the dignity of the human person were very pertinent.</li>
 <li>Sorry, most people have AI coming out of their ears already but Kyla Scanlon's latest, long and well researched <a href="https://kyla.substack.com/p/is-ai-going-to-destroy-our-lives">newsletter</a> about AI and jobs was also an interesting read.</li>
 <li>I have migrated to Antigravity CLI but noticed that it makes changes without showing the diff and seeking confirmation. It's true that otherwise it would be a clunky workflow and not very high-throughput, but are we being encouraged to just vibe code it?</li>
-<li>The return flight from Stansted to Lisbon was perhaps not as smooth as the outbound flight (take off delays but that's par for the course in Lisbon) but it was completely drama free, which makes this route a very valid option for us to visit Lisbon, in addition to Easyjet from Luton.</li>
+<li>The return flight from Lisbon to Stansted was perhaps not as smooth as the outbound flight (take off delays but that's par for the course in Lisbon) but it was completely drama free, which makes this route a valid option for us to visit Lisbon, in addition to Easyjet from Luton.</li>
 </ul>
 <p><img loading="lazy" decoding="async" src="https://varelasaraiva.com/attachments/PXL_20260525_162102929.webp" alt="PXL_20260525_162102929.jpg" />
 <img loading="lazy" decoding="async" src="https://varelasaraiva.com/attachments/PXL_20260529_114928657.webp" alt="PXL_20260529_114928657.jpg" />
@@ -145,7 +158,7 @@
             <description><![CDATA[<ul>
 <li>Cold symptoms carried over from last week and turned into something quite annoying.</li>
 <li>Ended up not doing my weekly pilgrimage to the Paddington office, which I enjoy, to avoid spreading viral load and hopefully to recover quicker.</li>
-<li>Added some polish to the <a href="https://varelasaraiva.com/colophon.html" class="internal-link">wiki</a>. The front page is improved and the layout in mobile should feel a bit more comfortable.</li>
+<li>Added some polish to the wiki. The front page is improved and the layout in mobile should feel a bit more comfortable.</li>
 <li>It’s half-term week here in the UK and that usually means juggling a bit more family stuff but this time we’ve booked holiday clubs with decent open and closing times so it has worked well.</li>
 <li>We are going to spend a week in Lisbon around Easter but we need to nail those dates down so that we can start organising the trip.</li>
 <li><a href="https://obsidian.md/blog/free-for-work/">Obsidian is now free for commercial use</a>, so I can move away from OneNote at work, which I’ve been using since I’ve been given a slap on the wrist for using <a href="https://varelasaraiva.com/obsidian.html" class="internal-link">Obsidian</a> without a licence a while ago.</li>
