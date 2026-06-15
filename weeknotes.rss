@@ -6,6 +6,33 @@
         <description>A collection of weeknotes</description>
         <atom:link href="https://varelasaraiva.com/weeknotes.rss" rel="self" type="application/rss+xml" />
         <item>
+            <title>Weeknotes 202624</title>
+            <link>https://varelasaraiva.com/weeknotes-202624.html</link>
+            <guid isPermaLink="true">https://varelasaraiva.com/weeknotes-202624.html</guid>
+            <pubDate>Tue, 16 Jun 2026 00:28:13 +0000</pubDate>
+            <description><![CDATA[<ul>
+<li>The important mid-June delivery got stuck in privacy/legal limbo, so it lost some of its urgency.</li>
+<li>I've been thinking about a few new features for vs.com.<ul>
+<li>add wikilinks to words or n-grams automatically if there is a matching wiki page (or an alias). There are Obsidian plugins that have this exact functionality, but I have some other requirements, so I'll have to roll up my sleeves and create my own bespoke solution.</li>
+<li>add some sort of pagination for <a href="https://varelasaraiva.com/weeknotes.html" class="internal-link">weeknotes</a>, providing easier navigation when browsing them back-to-back with no need to return to the weeknotes archive.</li>
+<li>weeknotes.html will be dynamically generated. This will be transparent to the reader, but it will make updating the site less clunky.</li>
+</ul>
+</li>
+<li>2-year-old A. sees too many possibilities in her mind. She recently saw that smiley potato cakes<sup class="footnote-ref" id="fnref-1"><a href="#fn-1">1</a></sup> soaked in cold water could be tasty, so she spent a meal dunking them into her glass of water. I can't wait until A. starts talking more fluently and we have a wider window to peek into her fascinating internal life.</li>
+<li>In 10 years they will feel embarrassed reading my notes. I hope so; let's continue.</li>
+<li><a href="https://kottke.org/26/06/yesterday-was-a-good-day">Yesterday was a good day</a>. Aren't these the best days?</li>
+</ul>
+<h3>Weekly snaps</h3>
+<p><img loading="lazy" decoding="async" src="https://varelasaraiva.com/attachments/Pasted image 20260616001652.webp" alt="Pasted image 20260616001652.jpg" />
+<img loading="lazy" decoding="async" src="https://varelasaraiva.com/attachments/Pasted image 20260616001719.webp" alt="Pasted image 20260616001719.jpg" /></p>
+<section class="footnotes">
+<ol>
+<li id="fn-1"><p>Before someone calls social services, my daughters are fussy eaters and anything they like that resembles being made of at least 80% actual food is a godsend<a href="#fnref-1" class="footnote">&#8617;</a></p></li>
+</ol>
+</section>
+]]></description>
+        </item>
+        <item>
             <title>Weeknotes 202623</title>
             <link>https://varelasaraiva.com/weeknotes-202623.html</link>
             <guid isPermaLink="true">https://varelasaraiva.com/weeknotes-202623.html</guid>

@@ -6,6 +6,32 @@
         <description>A log of changes to the site content</description>
         <atom:link href="https://varelasaraiva.com/difflog.rss" rel="self" type="application/rss+xml" />
         <item>
+            <title>Weeknotes 202624</title>
+            <link>https://varelasaraiva.com/weeknotes-202624.html</link>
+            <guid isPermaLink="true">https://varelasaraiva.com/weeknotes-202624.html</guid>
+            <pubDate>Tue, 16 Jun 2026 00:28:13 +0000</pubDate>
+            <description><![CDATA[<pre><code>+---
++title: Weeknotes 202624
++category: weeknote
++publish: true
++---
++- The important mid-June delivery got stuck in privacy/legal limbo, so it lost some of its urgency.
++- I've been thinking about a few new features for vs.com. 
++	- add wikilinks to words or n-grams automatically if there is a matching wiki page (or an alias). There are Obsidian plugins that have this exact functionality, but I have some other requirements, so I'll have to roll up my sleeves and create my own bespoke solution.
++	- add some sort of pagination for [[weeknotes]], providing easier navigation when browsing them back-to-back with no need to return to the weeknotes archive.
++	- weeknotes.html will be dynamically generated. This will be transparent to the reader, but it will make updating the site less clunky.
++- 2-year-old A. sees too many possibilities in her mind. She recently saw that smiley potato cakes[^1] soaked in cold water could be tasty, so she spent a meal dunking them into her glass of water. I can't wait until A. starts talking more fluently and we have a wider window to peek into her fascinating internal life.
++- In 10 years they will feel embarrassed reading my notes. I hope so; let's continue.
++- [Yesterday was a good day](https://kottke.org/26/06/yesterday-was-a-good-day). Aren't these the best days?
++
++### Weekly snaps
++![[Pasted image 20260616001652.jpg]]
++![[Pasted image 20260616001719.jpg]]
++
++[^1]: Before someone calls social services, my daughters are fussy eaters and anything they like that resembles being made of at least 80% actual food is a godsend
+\ No newline at end of file</code></pre>]]></description>
+        </item>
+        <item>
             <title>Weeknotes 202623</title>
             <link>https://varelasaraiva.com/weeknotes-202623.html</link>
             <guid isPermaLink="true">https://varelasaraiva.com/weeknotes-202623.html</guid>
@@ -227,10 +253,8 @@
             <link>https://varelasaraiva.com/weeknotes.html</link>
             <guid isPermaLink="true">https://varelasaraiva.com/weeknotes.html</guid>
             <pubDate>Fri, 20 Mar 2026 21:50:16 +0000</pubDate>
-            <description><![CDATA[<pre><code>-This is the archive for the weeknotes.
-+This is the archive for the weeknotes, inspired by Giles Turnbull's [Doing weeknotes](https://gilest.org/doingweeknotes/). 
--**Week numbers:** 01 02 03 04 05 06 07 08 09 10 11 [[weeknotes-202612|12]] [[weeknotes-202613|13]] [[weeknotes-202614|14]] [[weeknotes-202615|15]] 16 17 18 19 [[weeknotes-202620|20]] [[weeknotes-202621|21]] [[weeknotes-202622|22]] 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52
-+**Week numbers:** 01 02 03 04 05 06 07 08 09 10 11 [[weeknotes-202612|12]] [[weeknotes-202613|13]] [[weeknotes-202614|14]] [[weeknotes-202615|15]] 16 17 18 19 [[weeknotes-202620|20]] [[weeknotes-202621|21]] [[weeknotes-202622|22]] [[weeknotes-202623|23]] 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52</code></pre>]]></description>
+            <description><![CDATA[<pre><code>-**Week numbers:** 01 02 03 04 05 06 07 08 09 10 11 [[weeknotes-202612|12]] [[weeknotes-202613|13]] [[weeknotes-202614|14]] [[weeknotes-202615|15]] 16 17 18 19 [[weeknotes-202620|20]] [[weeknotes-202621|21]] [[weeknotes-202622|22]] [[weeknotes-202623|23]] 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52
++**Week numbers:** 01 02 03 04 05 06 07 08 09 10 11 [[weeknotes-202612|12]] [[weeknotes-202613|13]] [[weeknotes-202614|14]] [[weeknotes-202615|15]] 16 17 18 19 [[weeknotes-202620|20]] [[weeknotes-202621|21]] [[weeknotes-202622|22]] [[weeknotes-202623|23]] [[weeknotes-202624|24]] 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52</code></pre>]]></description>
         </item>
         <item>
             <title>Weeknotes 202511</title>

@@ -82,7 +82,7 @@ img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
-  margin: 15px 0;
+  margin: 5px 0;
 }
 
 code {
@@ -172,6 +172,10 @@ a:hover {
 }
 */
 
+h3 {
+  margin: 30px 0 20px 0;
+}
+
 a {
   /* color: #3aafa9; */
   color: #000;
@@ -214,4 +218,52 @@ td {
   border: 1px solid black;
   padding: 8px;
   text-align: left;
+}
+
+/* Footnotes */
+.footnotes {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  font-size: 0.85em;
+  color: #555;
+}
+
+.footnotes p {
+  margin: 0;
+  display: inline;
+}
+
+.footnotes ol {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.footnotes li {
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+.footnote-ref {
+  font-size: 0.75em;
+  vertical-align: super;
+  line-height: 0;
+  margin-left: 2px;
+}
+
+.footnote-ref a {
+  text-decoration: none;
+}
+
+.footnote-ref a:hover {
+  background-color: aquamarine;
+}
+
+.footnotes a.footnote {
+  text-decoration: none;
+  margin-left: 4px;
+}
+
+.footnotes a.footnote:hover {
+  background-color: aquamarine;
 }
