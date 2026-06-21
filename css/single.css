@@ -251,19 +251,6 @@ td {
   margin-left: 2px;
 }
 
-.footnote-ref a {
-  text-decoration: none;
-}
-
-.footnote-ref a:hover {
-  background-color: aquamarine;
-}
-
 .footnotes a.footnote {
-  text-decoration: none;
   margin-left: 4px;
-}
-
-.footnotes a.footnote:hover {
-  background-color: aquamarine;
 }
