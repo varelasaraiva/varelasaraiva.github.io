@@ -10,19 +10,11 @@
             <link>https://varelasaraiva.com/weeknotes-202625.html</link>
             <guid isPermaLink="true">https://varelasaraiva.com/weeknotes-202625.html</guid>
             <pubDate>Sun, 21 Jun 2026 23:45:45 +0000</pubDate>
-            <description><![CDATA[<pre><code>+---
-+title: Weeknotes 202625
-+category: weeknote
-+publish: true
-+---
-+- I attended the second day of the Google Cloud Summit in London, which was okay. It was good to have a lighter day in the middle of the week and catch up with old colleagues and meet new ones between sessions.
-+- Summer solstice means it's my beautiful, smart and funny H.'s birthday. I still have very vivid memories of that warm night, six years ago, at the height of the COVID lockdown.
-+- H. and I went back to the pool this weekend and it was great fun. We need more consistency to see if she becomes a bit more amphibious.
-+- It was weird arriving home on Friday and realising there was a [tragic train collision](https://www.bbc.co.uk/news/articles/cn75z3nl048o) a bit further north on the same line. 
-+
-+
-+### Weekly snaps
-+![[PXL_20260618_094323511.jpg]]
+            <description><![CDATA[<pre><code>-- I attended the second day of the Google Cloud Summit in London, which was okay. It was good to have a lighter day in the middle of the week and catch up with old colleagues and meet new ones between sessions.
++- I attended the second day of the Google Cloud Summit in London, which was okay. It was good to have a lighter day in the middle of the week and catch up with old colleagues and meet new faces between sessions.
+-- It was weird arriving home on Friday and realising there was a [tragic train collision](https://www.bbc.co.uk/news/articles/cn75z3nl048o) a bit further north on the same line. 
+-
++- It was weird arriving home on Friday and realising there was a [tragic train collision](https://www.bbc.co.uk/news/articles/cn75z3nl048o) a bit further north.
 \ No newline at end of file</code></pre>]]></description>
         </item>
         <item>
@@ -137,31 +129,7 @@
             <link>https://varelasaraiva.com/following.html</link>
             <guid isPermaLink="true">https://varelasaraiva.com/following.html</guid>
             <pubDate>Thu, 26 Mar 2026 16:19:21 +0000</pubDate>
-            <description><![CDATA[<pre><code>-- [Simon Willison](https://simonwillison.net)
--- [Rui Carmo](https://the.taoofmac.com)
--- [Alice Bartlett](https://alicebartlett.co.uk/) 
--- [Phil Gyford](https://www.gyford.com)
--- [Giles Turnbull](https://gilest.org)
-+- [Alice Bartlett](https://alicebartlett.co.uk/)
--- [Vicki Boykis](https://vickiboykis.com/)
--- [Vincent Warmerdam](https://koaning.io/)
-+- [Cory Doctorow](https://pluralistic.net/)
-+- [Giles Turnbull](https://gilest.org)
--- [Joel Grus](https://joelgrus.com/)
--- [Matt Webb](https://interconnected.org/home/)
-+- [Marginal Revolution (Tyler Cowen & Alex Tabarrok)](https://marginalrevolution.com/)
-+- [The Marginalian (Maria Popova)](https://www.themarginalian.org/)
-+- [Matt Webb](https://interconnected.org/home/)
-+- [Phil Gyford](https://www.gyford.com)
-+- [Rui Carmo](https://the.taoofmac.com)
-+- [Simon Willison](https://simonwillison.net)
--- [Marginal Revolution](https://marginalrevolution.com/)
--- [Cory Doctorow](https://pluralistic.net/)
--- [The Marginalian](https://www.themarginalian.org/)
--
-+- [Vicki Boykis](https://vickiboykis.com/)
-+- [Vincent Warmerdam](https://koaning.io/)
-\ No newline at end of file</code></pre>]]></description>
+            <description><![CDATA[<pre><code>+- [Camille Fournier](https://www.elidedbranches.com/)</code></pre>]]></description>
         </item>
         <item>
             <title>Ubuntu on Pixelbook</title>
