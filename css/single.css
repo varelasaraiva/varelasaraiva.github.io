@@ -254,3 +254,34 @@ td {
 .footnotes a.footnote {
   margin-left: 4px;
 }
+
+/* Pagination styling */
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  font-size: 0.9rem;
+}
+
+.pagination .disabled {
+  visibility: hidden;
+}
+
+/* Reply by email styling */
+.reply-email {
+  margin-top: 60px;
+  padding-top: 30px;
+  border-top: 1px solid #eee;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+/* If footnotes are present, remove the border and reduce top margin */
+.footnotes ~ .reply-email {
+  border-top: none;
+  margin-top: 40px;
+  padding-top: 0;
+}
