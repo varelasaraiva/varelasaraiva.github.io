@@ -49,41 +49,47 @@
                         <br />
                         Links to here:
                         
-                            
-                                <a href="weeknotes.html">/weeknotes</a>
-                                
+                                No backlinks
                             
                         </span>
                     </div>
                     <div id="content">
                         
                             <div class="pagination">
-                                
-                                    <a href="weeknotes-202622.html"
-                                       class="prev-link">← Weeknotes 202622</a>
-                                
-                                
-                                    <a href="weeknotes-202624.html"
-                                       class="next-link">Weeknotes 202624 →</a>
-                                
+                                <div class="pagination-col prev-col">
+                                    
+                                        <a href="weeknotes-202622.html"
+                                           class="prev-link">&lt;- Weeknotes 202622</a>
+                                    
+                                </div>
+                                <div class="pagination-col archive-col">
+                                    <a href="weeknotes.html" class="archive-link">Archive</a>
+                                </div>
+                                <div class="pagination-col next-col">
+                                    
+                                        <a href="weeknotes-202624.html"
+                                           class="next-link">Weeknotes 202624 -&gt;</a>
+                                    
+                                </div>
                             </div>
                         
                         <ul>
 <li>At work, I hit the ground running on Monday, having prepared myself for it during the break, and had a mountain to catch up on as soon as I arrived. In our team, we are working frantically towards an important mid-June delivery and needs must.</li>
-<li>I was faced with doing a ~350 TB SQL query (~£1,600) to get to one of our objectives. It's not going to happen, so I will have to come up with a creative solution next week, which honestly is the sort of stuff that makes me get out of bed in the morning, go through the brutal battle of getting the girls ready to go out in a timely fashion, and walk across the landing to the home office, anyway.</li>
-<li>H. perfected her impersonation of a line we like by a minor character of a well-known cartoon show. It's brilliant—one of the funniest things in the world right now.</li>
+<li>I was faced with doing a ~350 TB SQL query (~£1,600) to get to one of our objectives. It’s not going to happen, so I will have to come up with a creative solution next week, which honestly is the sort of stuff that makes me get out of bed in the morning, go through the brutal battle of getting the girls ready to go out in a timely fashion, and walk across the landing to the home office, anyway.</li>
+<li>H. perfected her impersonation of a line we like by a minor character of a well-known cartoon show. It’s brilliant—one of the funniest things in the world right now.</li>
 <li><a href="https://gilest.org/doingweeknotes/">Weeknotes</a> are supposed to be a quick, raw stream of consciousness, but even so, I need to start doing some basic proofreading before I publish.</li>
 </ul>
 
                         
                             <div class="reply-email">
-                                <a href="#"
-                                   data-user="varelasaraiva"
-                                   data-domain="gmail.com"
-                                   onmouseenter="this.href='mailto:' + this.dataset.user + '@' + this.dataset.domain + '?subject=Reply to: varelasaraiva.com - ' + encodeURIComponent('Weeknotes 202623')"
-                                   onfocus="this.href='mailto:' + this.dataset.user + '@' + this.dataset.domain + '?subject=Reply to: varelasaraiva.com - ' + encodeURIComponent('Weeknotes 202623')">
-                                    Reply by email
-                                </a>
+                                <a id="email-reply-link" href="#">Reply by email</a>
+                                <script>
+                                    (function () {
+                                        var email = atob("dmFyZWxhc2FyYWl2YUBnbWFpbC5jb20=");
+                                        var link = document.getElementById("email-reply-link");
+                                        link.href = "mailto:" + email + "?subject=Reply to: varelasaraiva.com - " + encodeURIComponent('Weeknotes 202623');
+                                    })();
+                                </script>
                             </div>
                         
                     </div>

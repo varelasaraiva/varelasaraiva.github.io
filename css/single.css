@@ -266,6 +266,22 @@ td {
   font-size: 0.9rem;
 }
 
+.pagination-col {
+  flex: 1;
+}
+
+.prev-col {
+  text-align: left;
+}
+
+.archive-col {
+  text-align: center;
+}
+
+.next-col {
+  text-align: right;
+}
+
 .pagination .disabled {
   visibility: hidden;
 }
@@ -285,3 +301,57 @@ td {
   margin-top: 40px;
   padding-top: 0;
 }
+
+/* Weeknotes grid layout */
+.weeknotes-year-container {
+  max-width: 480px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.weeknotes-year-container:first-of-type {
+  margin-top: 40px;
+}
+
+.weeknotes-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 10px;
+  max-width: 480px;
+  margin: 20px 0 40px 0;
+}
+
+.weeknotes-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.weeknotes-cell.has-note {
+  background-color: #e0fbf7;
+  color: #008f7a;
+  border: 2px solid #a7f3e8;
+  text-decoration: none;
+}
+
+.weeknotes-cell.has-note:hover {
+  background-color: aquamarine;
+  color: #000;
+  border-color: aquamarine;
+  transform: scale(1.08);
+  box-shadow: 0 4px 12px rgba(0, 229, 188, 0.2);
+  text-decoration: none;
+}
+
+.weeknotes-cell.no-note {
+  background-color: #f7f7f7;
+  color: #ccc;
+  border: 1px solid #eee;
+  cursor: default;
+}
+

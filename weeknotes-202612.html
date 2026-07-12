@@ -36,7 +36,7 @@
                                 margin: 0 5px 0 0;
                                 padding: 0;
                                 vertical-align: -0.4rem" />
-                    <b>Pedro Varela Saraiva</b> on 2026-03-26
+                    <b>Pedro Varela Saraiva</b> on 2026-07-12
                     (<a href="diff/diff_weeknotes-202612.html">diff log</a>)
                     <br />
                     <!--•-->&nbsp;
@@ -49,47 +49,53 @@
                         <br />
                         Links to here:
                         
-                            
-                                <a href="weeknotes.html">/weeknotes</a>
-                                
+                                No backlinks
                             
                         </span>
                     </div>
                     <div id="content">
                         
                             <div class="pagination">
-                                
-                                    <a href="weeknotes-202511.html"
-                                       class="prev-link">← Weeknotes 202511</a>
-                                
-                                
-                                    <a href="weeknotes-202613.html"
-                                       class="next-link">Weeknotes 202613 →</a>
-                                
+                                <div class="pagination-col prev-col">
+                                    
+                                        <a href="weeknotes-202511.html"
+                                           class="prev-link">&lt;- Weeknotes 202511</a>
+                                    
+                                </div>
+                                <div class="pagination-col archive-col">
+                                    <a href="weeknotes.html" class="archive-link">Archive</a>
+                                </div>
+                                <div class="pagination-col next-col">
+                                    
+                                        <a href="weeknotes-202613.html"
+                                           class="next-link">Weeknotes 202613 -&gt;</a>
+                                    
+                                </div>
                             </div>
                         
                         <blockquote>
 <p>There’ll be more next week - see you then!</p>
 </blockquote>
-<p>... And in the end, there was not more <a href="weeknotes-202511.html" class="internal-link">next week</a> or anything else for over a year. To cut the story short, because this is not a 2025 review, life happened. 2025 was not a bad year, by any means, but it was a hard working year. Normal parenting stuff - nothing out of the ordinary. Years usually start optimistically and I was convinced A's sleeping patterns would improve like H's around the second year and we, the parents, would be less sleep deprived, but this time it was different.</p>
+<p>… And in the end, there was not more <a href="weeknotes-202511.html" class="internal-link">next week</a> or anything else for over a year. To cut the story short, because this is not a 2025 review, life happened. 2025 was not a bad year, by any means, but it was a hard working year. Normal parenting stuff—nothing out of the ordinary. Years usually start optimistically and I was convinced A’s sleeping patterns would improve like H’s around the second year and we, the parents, would be less sleep deprived, but this time it was different.</p>
 <p>I have been planning (in my mind) a rewrite of the static site generator for most of 2025 and I finally decided to roll up my sleeves during the Christmas break. The main new features are</p>
 <ol>
 <li>Incremental builds</li>
-<li>Using git to save checkpoints and derive created and modified dates, instead of relying on the OS filesystem's <code>ctime</code> and <code>mtime</code></li>
+<li>Using git to save checkpoints and derive created and modified dates, instead of relying on the OS filesystem’s <code>ctime</code> and <code>mtime</code></li>
 <li>Generate RSS feeds</li>
 </ol>
-<p>I had no idea what I was getting into with the incremental builds and how infinitely more complex the codebase has become. Fast forward to last week, it felt most functionality was there and the most obvious bugs were fixed. It is still in beta but I'm doing a soft launch, not announcing for now in any of the usual channels. I think it's just a matter of updating and  polishing some of the slash pages and it should ready for the general audience.</p>
-<p>I am hoping this will be a solid foundation of a slowly evolving platform. Developing the static site generator has been fun but now it's time to turn my attention to actually using it - writing content.</p>
+<p>I had no idea what I was getting into with the incremental builds and how infinitely more complex the codebase has become. Fast forward to last week, it felt most functionality was there and the most obvious bugs were fixed. It is still in beta but I’m doing a soft launch, not announcing for now in any of the usual channels. I think it’s just a matter of updating and  polishing some of the slash pages and it should ready for the general audience.</p>
+<p>I am hoping this will be a solid foundation of a slowly evolving platform. Developing the static site generator has been fun but now it’s time to turn my attention to actually using it—writing content.</p>
 
                         
                             <div class="reply-email">
-                                <a href="#"
-                                   data-user="varelasaraiva"
-                                   data-domain="gmail.com"
-                                   onmouseenter="this.href='mailto:' + this.dataset.user + '@' + this.dataset.domain + '?subject=Reply to: varelasaraiva.com - ' + encodeURIComponent('Weeknotes 202612')"
-                                   onfocus="this.href='mailto:' + this.dataset.user + '@' + this.dataset.domain + '?subject=Reply to: varelasaraiva.com - ' + encodeURIComponent('Weeknotes 202612')">
-                                    Reply by email
-                                </a>
+                                <a id="email-reply-link" href="#">Reply by email</a>
+                                <script>
+                                    (function () {
+                                        var email = atob("dmFyZWxhc2FyYWl2YUBnbWFpbC5jb20=");
+                                        var link = document.getElementById("email-reply-link");
+                                        link.href = "mailto:" + email + "?subject=Reply to: varelasaraiva.com - " + encodeURIComponent('Weeknotes 202612');
+                                    })();
+                                </script>
                             </div>
                         
                     </div>

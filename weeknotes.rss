@@ -6,17 +6,37 @@
         <description>A collection of weeknotes</description>
         <atom:link href="https://varelasaraiva.com/weeknotes.rss" rel="self" type="application/rss+xml" />
         <item>
+            <title>Weeknotes 202628</title>
+            <link>https://varelasaraiva.com/weeknotes-202628.html</link>
+            <guid isPermaLink="true">https://varelasaraiva.com/weeknotes-202628.html</guid>
+            <pubDate>Tue, 07 Jul 2026 22:59:06 +0000</pubDate>
+            <description><![CDATA[<p><em>Me, in Portuguese</em>: Portugal, say Por-tu-gal.<br/>
+<em>2-year-old A. in English</em>: Cro-co-dile! 😄</p>
+<p style="text-align: center; font-size: 18px; color: #ccc; margin: 30px 0px">* * *</p>
+
+<p>I spent some productive late evenings digital gardening. Was I procrastinating, trying to put off an important task that needed to be done ASAP? No, not at all. As a result, the new features that I’ve been planning for <a href="https://varelasaraiva.com/weeknotes-202624.html" class="internal-link">some time</a> have finally landed. Here’s a list of changes:</p>
+<ul>
+<li>Added autolinking the first occurrence of words or n-grams in markdown content to existing wiki node slugs, titles or aliases. It supports a blocklist file to specify nodes that are not meant to be autolinked.</li>
+<li>Added autolinking of words or n-grams to an external URL, as mapped in a JSON file.</li>
+<li>The <a href="https://varelasaraiva.com/weeknotes.html" class="internal-link">weeknotes</a> archive is now dynamically generated.</li>
+<li>Added better navigation to individual weeknotes.</li>
+<li>Applied typographical embellishments like auto replacing dashes with en- or em-dashes, straight quotes with curly quotes, and shortcodes with emojis.</li>
+</ul>
+<p>If something breaks, please let me know.</p>
+]]></description>
+        </item>
+        <item>
             <title>Weeknotes 202626</title>
             <link>https://varelasaraiva.com/weeknotes-202626.html</link>
             <guid isPermaLink="true">https://varelasaraiva.com/weeknotes-202626.html</guid>
             <pubDate>Sun, 28 Jun 2026 23:14:47 +0000</pubDate>
             <description><![CDATA[<ul>
 <li>Nurseries were closed most afternoons this week, which meant that a good part of the working week was significantly disrupted. In any case, I started the weekend with the sense that it was a productive week.</li>
-<li>&quot;[...] so we're constantly pushing complex ideas through the eye of the needle of language.&quot;, the lossy compression of language. Reading a light managerial book, completely disarmed, and suddenly I'm punched by something like this.</li>
-<li>I finished the week with one of those still-elusive nights where I got to sleep for six hours almost in one go. The following day, we met friends at IWM Duxford, an old WWII air base turned into a great air museum-one of my favourite places. Since the last time we were there, they've built a nice playground with a very sensible layout (yes, I'm looking at you, Bancroft Gardens in Hitchin). The children, of course, wanted to spend most of the day there. Thankfully, it was built right next to the airstrip, so that we could keep an eye on the Spitfires and Hurricanes taking off and landing. We were disappointed, though, that we didn't get to see the Corsair and the Mustang pictured below fly.</li>
-<li>I haven't watched any live Formula 1 broadcasts this season yet.</li>
+<li>“[…] so we’re constantly pushing complex ideas through the eye of the needle of language.”, the lossy compression of language. Reading a light managerial book, completely disarmed, and suddenly I’m punched by something like this.</li>
+<li>I finished the week with one of those still-elusive nights where I got to sleep for six hours almost in one go. The following day, we met friends at IWM Duxford, an old WWII air base turned into a great air museum—one of my favourite places. Since the last time we were there, they’ve built a nice playground with a very sensible layout (yes, I’m looking at you, Bancroft Gardens in Hitchin). The children, of course, wanted to spend most of the day there. Thankfully, it was built right next to the airstrip, so that we could keep an eye on the Spitfires and Hurricanes taking off and landing. We were disappointed, though, that we didn’t get to see the Corsair and the Mustang pictured below fly.</li>
+<li>I haven’t watched any live Formula 1 broadcasts this season yet.</li>
 </ul>
-<h3>Weekly snaps</h3>
+<h3>📷</h3>
 <p><img loading="lazy" decoding="async" src="https://varelasaraiva.com/attachments/PXL_20260628_120449216.webp" alt="PXL_20260628_120449216.jpg" /></p>
 ]]></description>
         </item>
@@ -27,11 +47,11 @@
             <pubDate>Sun, 21 Jun 2026 23:45:45 +0000</pubDate>
             <description><![CDATA[<ul>
 <li>I attended the second day of the Google Cloud Summit in London, which was okay. It was good to have a lighter day in the middle of the week and catch up with old colleagues and meet new faces between sessions.</li>
-<li>Summer solstice means it's my beautiful, smart and funny H.'s birthday. I still have very vivid memories of that warm night, six years ago, at the height of the COVID lockdown.</li>
+<li>Summer solstice means it’s my beautiful, smart and funny H.’s birthday. I still have very vivid memories of that warm night, six years ago, at the height of the COVID lockdown.</li>
 <li>H. and I went back to the pool this weekend and it was great fun. We need more consistency to see if she becomes a bit more amphibious.</li>
 <li>It was weird arriving home on Friday, coming from the train station, and realising there was a <a href="https://www.bbc.co.uk/news/articles/cn75z3nl048o">tragic train collision</a> a bit further north.</li>
 </ul>
-<h3>Weekly snaps</h3>
+<h3>📷</h3>
 <p><img loading="lazy" decoding="async" src="https://varelasaraiva.com/attachments/PXL_20260618_094323511.webp" alt="PXL_20260618_094323511.jpg" /></p>
 ]]></description>
         </item>
@@ -42,17 +62,17 @@
             <pubDate>Tue, 16 Jun 2026 00:28:13 +0000</pubDate>
             <description><![CDATA[<ul>
 <li>The important mid-June delivery got stuck in privacy/legal limbo, so it lost some of its urgency.</li>
-<li>I've been thinking about a few new features for vs.com.<ul>
-<li>add wikilinks to words or n-grams automatically if there is a matching wiki page (or an alias). There are Obsidian plugins that have this exact functionality, but I have some other requirements, so I'll have to roll up my sleeves and create my own bespoke solution.</li>
+<li>I’ve been thinking about a few new features for vs.com.<ul>
+<li>add wikilinks to words or n-grams automatically if there is a matching wiki page (or an alias). There are Obsidian plugins that have this exact functionality, but I have some other requirements, so I’ll have to roll up my sleeves and create my own bespoke solution.</li>
 <li>add some sort of pagination for <a href="https://varelasaraiva.com/weeknotes.html" class="internal-link">weeknotes</a>, providing easier navigation when browsing them back-to-back with no need to return to the weeknotes archive.</li>
 <li>weeknotes.html will be dynamically generated. This will be transparent to the reader, but it will make updating the site less clunky.</li>
 </ul>
 </li>
-<li>2-year-old A. sees too many possibilities in her mind. She recently saw that smiley potato cakes<sup class="footnote-ref" id="fnref-1"><a href="#fn-1">1</a></sup> soaked in cold water could be tasty, so she spent a meal dunking them into her glass of water. I can't wait until A. starts talking more fluently and we have a wider window to peek into her fascinating internal life.</li>
-<li>In 10 years they will feel embarrassed reading my notes. I hope so; let's continue.</li>
-<li><a href="https://kottke.org/26/06/yesterday-was-a-good-day">Yesterday was a good day</a>. Aren't these the best days?</li>
+<li>2-year-old A. sees too many possibilities in her mind. She recently saw that smiley potato cakes<sup class="footnote-ref" id="fnref-1"><a href="#fn-1">1</a></sup> soaked in cold water could be tasty, so she spent a meal dunking them into her glass of water. I can’t wait until A. starts talking more fluently and we have a wider window to peek into her fascinating internal life.</li>
+<li>In 10 years they will feel embarrassed reading my notes. I hope so; let’s continue.</li>
+<li><a href="https://kottke.org/26/06/yesterday-was-a-good-day">Yesterday was a good day</a>. Aren’t these the best days?</li>
 </ul>
-<h3>Weekly snaps</h3>
+<h3>📷</h3>
 <p><img loading="lazy" decoding="async" src="https://varelasaraiva.com/attachments/Pasted image 20260616001652.webp" alt="Pasted image 20260616001652.jpg" />
 <img loading="lazy" decoding="async" src="https://varelasaraiva.com/attachments/Pasted image 20260616001719.webp" alt="Pasted image 20260616001719.jpg" /></p>
 <section class="footnotes">
@@ -69,8 +89,8 @@
             <pubDate>Sun, 07 Jun 2026 23:12:02 +0000</pubDate>
             <description><![CDATA[<ul>
 <li>At work, I hit the ground running on Monday, having prepared myself for it during the break, and had a mountain to catch up on as soon as I arrived. In our team, we are working frantically towards an important mid-June delivery and needs must.</li>
-<li>I was faced with doing a ~350 TB SQL query (~£1,600) to get to one of our objectives. It's not going to happen, so I will have to come up with a creative solution next week, which honestly is the sort of stuff that makes me get out of bed in the morning, go through the brutal battle of getting the girls ready to go out in a timely fashion, and walk across the landing to the home office, anyway.</li>
-<li>H. perfected her impersonation of a line we like by a minor character of a well-known cartoon show. It's brilliant—one of the funniest things in the world right now.</li>
+<li>I was faced with doing a ~350 TB SQL query (~£1,600) to get to one of our objectives. It’s not going to happen, so I will have to come up with a creative solution next week, which honestly is the sort of stuff that makes me get out of bed in the morning, go through the brutal battle of getting the girls ready to go out in a timely fashion, and walk across the landing to the home office, anyway.</li>
+<li>H. perfected her impersonation of a line we like by a minor character of a well-known cartoon show. It’s brilliant—one of the funniest things in the world right now.</li>
 <li><a href="https://gilest.org/doingweeknotes/">Weeknotes</a> are supposed to be a quick, raw stream of consciousness, but even so, I need to start doing some basic proofreading before I publish.</li>
 </ul>
 ]]></description>
@@ -81,12 +101,13 @@
             <guid isPermaLink="true">https://varelasaraiva.com/weeknotes-202622.html</guid>
             <pubDate>Thu, 28 May 2026 23:59:28 +0000</pubDate>
             <description><![CDATA[<ul>
-<li>It seems we've avoided some toasty days in the UK. The temperatures haven't been that different in Lisbon, but it's far more tolerable here. How come Estoril is 23 km from Lisbon but it's always 4 C colder? Is it the ocean breeze?</li>
-<li>I could have spent my late evenings more unwisely than by reading the entire latest <a href="https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html">encyclical letter</a> by Pope Leo XIV (via, e.g., <a href="https://simonwillison.net/2026/May/25/encyclical-on-ai/">Simon Willison</a>). That is an understatement, of course; I thought the reflection about what sort of post-AI world we'd rather have and his view that when we apply AI (or any other technology), we should optimise for the dignity of the human person were very pertinent.</li>
-<li>Sorry, most people have AI coming out of their ears already but Kyla Scanlon's latest, long and well researched <a href="https://kyla.substack.com/p/is-ai-going-to-destroy-our-lives">newsletter</a> about AI and jobs was also an interesting read.</li>
-<li>I have migrated to Antigravity CLI but noticed that it makes changes without showing the diff and seeking confirmation. It's true that otherwise it would be a clunky workflow and not very high-throughput, but are we being encouraged to just vibe code it?</li>
-<li>The return flight from Lisbon to Stansted was perhaps not as smooth as the outbound flight (take off delays but that's par for the course in Lisbon) but it was completely drama free, which makes this route a valid option for us to visit Lisbon, in addition to Easyjet from Luton.</li>
+<li>It seems we’ve avoided some toasty days in the UK. The temperatures haven’t been that different in Lisbon, but it’s far more tolerable here. How come Estoril is 23 km from Lisbon but it’s always 4 C colder? Is it the ocean breeze?</li>
+<li>I could have spent my late evenings more unwisely than by reading the entire latest <a href="https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html">encyclical letter</a> by Pope Leo XIV (via, e.g., <a href="https://simonwillison.net/2026/May/25/encyclical-on-ai/">Simon Willison</a>). That is an understatement, of course; I thought the reflection about what sort of post-AI world we’d rather have and his view that when we apply AI (or any other technology), we should optimise for the dignity of the human person were very pertinent.</li>
+<li>Sorry, most people have AI coming out of their ears already but <a href="https://kyla.substack.com">Kyla Scanlon</a>’s latest, long and well researched <a href="https://kyla.substack.com/p/is-ai-going-to-destroy-our-lives">newsletter</a> about AI and jobs was also an interesting read.</li>
+<li>I have migrated to Antigravity CLI but noticed that it makes changes without showing the diff and seeking confirmation. It’s true that otherwise it would be a clunky workflow and not very high-throughput, but are we being encouraged to just vibe code it?</li>
+<li>The return flight from Lisbon to Stansted was perhaps not as smooth as the outbound flight (take off delays but that’s par for the course in Lisbon) but it was completely drama free, which makes this route a valid option for us to visit Lisbon, in addition to Easyjet from Luton.</li>
 </ul>
+<h3>📷</h3>
 <p><img loading="lazy" decoding="async" src="https://varelasaraiva.com/attachments/PXL_20260525_162102929.webp" alt="PXL_20260525_162102929.jpg" />
 <img loading="lazy" decoding="async" src="https://varelasaraiva.com/attachments/PXL_20260529_114928657.webp" alt="PXL_20260529_114928657.jpg" />
 <img loading="lazy" decoding="async" src="https://varelasaraiva.com/attachments/PXL_20260529_133209262.webp" alt="PXL_20260529_133209262.jpg" />
@@ -99,10 +120,10 @@
             <guid isPermaLink="true">https://varelasaraiva.com/weeknotes-202621.html</guid>
             <pubDate>Thu, 28 May 2026 23:59:28 +0000</pubDate>
             <description><![CDATA[<ul>
-<li>This was an important and busy week. The momentum was interrupted by this week's half-term break, but let's hope I can keep it going when I get back.</li>
-<li>As I write this, we are in Estoril, the return flight is yet to happen and <span class="math">\(N=1\)</span>, but flying to Lisbon with Ryanair from Stansted was quite straightforward—with perhaps the exception of the shuttle transfer between the Long Stay Car Park and the terminal. In comparison to Luton Airport's, it had far longer queues, but it's a bigger airport and it's half-term.</li>
+<li>This was an important and busy week. The momentum was interrupted by this week’s half-term break, but let’s hope I can keep it going when I get back.</li>
+<li>As I write this, we are in Estoril, the return flight is yet to happen and <span class="math">\(N=1\)</span>, but flying to Lisbon with Ryanair from Stansted was quite straightforward—with perhaps the exception of the shuttle transfer between the Long Stay Car Park and the terminal. In comparison to Luton Airport’s, it had far longer queues, but it’s a bigger airport and it’s half-term.</li>
 <li>Yet again, I felt short changed by the car hire at the Lisbon Airport.</li>
-<li>We've met with friends for an early dinner on Sunday and it was lovely to catch up.</li>
+<li>We’ve met with friends for an early dinner on Sunday and it was lovely to catch up.</li>
 </ul>
 ]]></description>
         </item>
@@ -115,10 +136,10 @@
 <li>The girls are asleep. I came online and thought about saying hi.</li>
 <li>Did I really write that I was going to have some interesting weeks ahead??</li>
 <li>Besides the cosmological, has anything more mundane happened? Let me see.</li>
-<li>The joys of assembling flat-packed furniture, once again. We configured a <a href="https://tylko.com">Tylko</a> bookshelf on their website (#MyTylko in the socials) and had it delivered all the way from Poland. We're happy with the purchase; the living room looks a bit more civilised now.</li>
-<li>H. had her first tooth fall out. It wasn't gory at all.</li>
-<li>A's tricycle was delivered in the meantime. It was initially ignored, as her sister's scooter was still the centre of her life, but with some insistence, it seems to be her first choice now—much to my relief.</li>
-<li>We're taking a break during the half-term and spending the week in Portugal. A different airport and airline this time, and we've rented an Airbnb for the first time. Let's see how it goes.</li>
+<li>The joys of assembling flat-packed furniture, once again. We configured a <a href="https://tylko.com">Tylko</a> bookshelf on their website (#MyTylko in the socials) and had it delivered all the way from Poland. We’re happy with the purchase; the living room looks a bit more civilised now.</li>
+<li>H. had her first tooth fall out. It wasn’t gory at all.</li>
+<li>A’s tricycle was delivered in the meantime. It was initially ignored, as her sister’s scooter was still the centre of her life, but with some insistence, it seems to be her first choice now—much to my relief.</li>
+<li>We’re taking a break during the half-term and spending the week in Portugal. A different airport and airline this time, and we’ve rented an Airbnb for the first time. Let’s see how it goes.</li>
 </ul>
 ]]></description>
         </item>
@@ -130,10 +151,10 @@
             <description><![CDATA[<ul>
 <li>It was the second week of Easter holidays for H. and we decided to take the week off and spend it in the Center Parcs in the Elveden Forest, Suffolk.</li>
 <li>It is very much part of the family holidays industrial-complex and it is very formatted but we liked the format and would definitely go back again. Two and five year olds are only able to enjoy about a tenth of what is on offer, so there is still lots of replayability potential.</li>
-<li>H. definitely had a blast: &quot;Best holidays ever!&quot;. Good, that's what we want to hear.</li>
-<li>I was hoping to do loads of stuff and move the site from beta to something more stable and complete in the late evenings whilst staying there but the competition from reading The Screwtape Letters and watching the end of the season 3 of The Chosen (mostly this), meant things are pretty much in the same state. No worries, we'll get there soon.</li>
+<li>H. definitely had a blast: “Best holidays ever!”. Good, that’s what we want to hear.</li>
+<li>I was hoping to do loads of stuff and move the site from beta to something more stable and complete in the late evenings whilst staying there but the competition from reading The Screwtape Letters and watching the end of the season 3 of The Chosen (mostly this), meant things are pretty much in the same state. No worries, we’ll get there soon.</li>
 <li>Placed an order for a tricycle for our two year old A., who is a bit of a Schumacher, and another helmet for H., one size up.</li>
-<li>Now, it's time to go back to the routine of work, school and nursery. My office day count is at zero in April so it's going to be an interesting rest of the month.</li>
+<li>Now, it’s time to go back to the routine of work, school and nursery. My office day count is at zero in April so it’s going to be an interesting rest of the month.</li>
 </ul>
 ]]></description>
         </item>
@@ -143,9 +164,9 @@
             <guid isPermaLink="true">https://varelasaraiva.com/weeknotes-202614.html</guid>
             <pubDate>Sun, 12 Apr 2026 22:42:14 +0000</pubDate>
             <description><![CDATA[<ul>
-<li>The first week of H's Easter holidays. H. went to holiday club on work days, which worked reasonably well. The only downside was the pickup at 1630, meaning that work was somewhat disrupted from that time onwards. I tried to compress the days as much as possible and I think that worked well.</li>
+<li>The first week of H’s Easter holidays. H. went to holiday club on work days, which worked reasonably well. The only downside was the pickup at 1630, meaning that work was somewhat disrupted from that time onwards. I tried to compress the days as much as possible and I think that worked well.</li>
 <li>I went just once to the office this week and completed the monthly minimum for March. No contribution towards the April count means the second half of the month is going to be a crunch.</li>
-<li>Next week, we'll take the week off and we're going for the first time to Center Parcs. A very welcome break because energy was running low and we need to manage it until the longer summer break, which will perhaps happen only in August.</li>
+<li>Next week, we’ll take the week off and we’re going for the first time to Center Parcs. A very welcome break because energy was running low and we need to manage it until the longer summer break, which will perhaps happen only in August.</li>
 </ul>
 ]]></description>
         </item>
@@ -155,10 +176,10 @@
             <guid isPermaLink="true">https://varelasaraiva.com/weeknotes-202613.html</guid>
             <pubDate>Tue, 31 Mar 2026 19:34:49 +0000</pubDate>
             <description><![CDATA[<ul>
-<li>The site is still in beta. I haven't had the time to address what is still pending because...</li>
+<li>The site is still in beta. I haven’t had the time to address what is still pending because…</li>
 <li>Last week was different because A. got hands, foot and mouth for the third time and had to stay at home recovering for two days, with my wife and I alternating with the nursing duties. Because she had a blocked nose, A. did not sleep much due to the troubled breathing, so we ended the week exhausted. Things are coming back to normal.</li>
-<li>I finally seem to have solved a problem with the <a href="https://varelasaraiva.com/pixelbook.html" class="internal-link">Pixelbook</a> that has been nagging me since I've started using Linux on it. The variant with an Intel Core i5 CPU (the one I have) doesn't have a modern SSD; it has an eMMC, which is basically an SD card soldered to the motherboard that can only do one operation at a time. This means the system is very limited in terms of I/O. When running I/O intensive tasks like e.g. upgrading the system, that completely saturates the system and even low level events like refreshing what is displayed on the screen or moving the mouse cursor around has to wait. This means that sometimes, especially when these processes would run unattended in the background, the laptop would freeze for minutes on end, rendering it completely unusable. The solution is mainly using a kernel scheduler that deprioritises this sort of tasks and reserves resource for anything essential. This way, even if these I/O heavy tasks may take longer to complete, you can ensure that your system will always be responsive. I may add something about this soon, in a page somewhere.</li>
-<li>We've got to the end of the first quarter of the year, surely surprising many skeptics. It's time to look again at the yearly objectives and make sure things don't start to slide.</li>
+<li>I finally seem to have solved a problem with the <a href="https://varelasaraiva.com/pixelbook.html" class="internal-link">Pixelbook</a> that has been nagging me since I’ve started using Linux on it. The variant with an Intel Core i5 CPU (the one I have) doesn’t have a modern SSD; it has an eMMC, which is basically an SD card soldered to the motherboard that can only do one operation at a time. This means the system is very limited in terms of I/O. When running I/O intensive tasks like e.g. upgrading the system, that completely saturates the system and even low level events like refreshing what is displayed on the screen or moving the mouse cursor around has to wait. This means that sometimes, especially when these processes would run unattended in the background, the laptop would freeze for minutes on end, rendering it completely unusable. The solution is mainly using a kernel scheduler that deprioritises this sort of tasks and reserves resource for anything essential. This way, even if these I/O heavy tasks may take longer to complete, you can ensure that your system will always be responsive. I may add something about this soon, in a page somewhere.</li>
+<li>We’ve got to the end of the first quarter of the year, surely surprising many skeptics. It’s time to look again at the yearly objectives and make sure things don’t start to slide.</li>
 </ul>
 ]]></description>
         </item>
@@ -183,15 +204,15 @@
             <description><![CDATA[<blockquote>
 <p>There’ll be more next week - see you then!</p>
 </blockquote>
-<p>... And in the end, there was not more <a href="https://varelasaraiva.com/weeknotes-202511.html" class="internal-link">next week</a> or anything else for over a year. To cut the story short, because this is not a 2025 review, life happened. 2025 was not a bad year, by any means, but it was a hard working year. Normal parenting stuff - nothing out of the ordinary. Years usually start optimistically and I was convinced A's sleeping patterns would improve like H's around the second year and we, the parents, would be less sleep deprived, but this time it was different.</p>
+<p>… And in the end, there was not more <a href="https://varelasaraiva.com/weeknotes-202511.html" class="internal-link">next week</a> or anything else for over a year. To cut the story short, because this is not a 2025 review, life happened. 2025 was not a bad year, by any means, but it was a hard working year. Normal parenting stuff—nothing out of the ordinary. Years usually start optimistically and I was convinced A’s sleeping patterns would improve like H’s around the second year and we, the parents, would be less sleep deprived, but this time it was different.</p>
 <p>I have been planning (in my mind) a rewrite of the static site generator for most of 2025 and I finally decided to roll up my sleeves during the Christmas break. The main new features are</p>
 <ol>
 <li>Incremental builds</li>
-<li>Using git to save checkpoints and derive created and modified dates, instead of relying on the OS filesystem's <code>ctime</code> and <code>mtime</code></li>
+<li>Using git to save checkpoints and derive created and modified dates, instead of relying on the OS filesystem’s <code>ctime</code> and <code>mtime</code></li>
 <li>Generate RSS feeds</li>
 </ol>
-<p>I had no idea what I was getting into with the incremental builds and how infinitely more complex the codebase has become. Fast forward to last week, it felt most functionality was there and the most obvious bugs were fixed. It is still in beta but I'm doing a soft launch, not announcing for now in any of the usual channels. I think it's just a matter of updating and  polishing some of the slash pages and it should ready for the general audience.</p>
-<p>I am hoping this will be a solid foundation of a slowly evolving platform. Developing the static site generator has been fun but now it's time to turn my attention to actually using it - writing content.</p>
+<p>I had no idea what I was getting into with the incremental builds and how infinitely more complex the codebase has become. Fast forward to last week, it felt most functionality was there and the most obvious bugs were fixed. It is still in beta but I’m doing a soft launch, not announcing for now in any of the usual channels. I think it’s just a matter of updating and  polishing some of the slash pages and it should ready for the general audience.</p>
+<p>I am hoping this will be a solid foundation of a slowly evolving platform. Developing the static site generator has been fun but now it’s time to turn my attention to actually using it—writing content.</p>
 ]]></description>
         </item>
         <item>

@@ -57,13 +57,15 @@
       </p>
 
       <p>
-        I can also be found on
-        <a rel="me" href="https://mastodon.social/@varelasaraiva">Mastodon</a>
-        and
-        <a
-          href="https://signal.me/#eu/Bs_B-fTyVZb-Rj0BBilLIsBig4sExObGJ0P5JpmnpGVzvcgvS1tPt7wmbkxYZYtA"
-          >Signal</a
-        >
+        Contact me by
+        <a id="email-link" href="#">email</a>
+        <script>
+          (function () {
+            var email = atob("dmFyZWxhc2FyYWl2YUBnbWFpbC5jb20=");
+            var link = document.getElementById("email-link");
+            link.href = "mailto:" + email;
+          })();
+        </script>
       </p>
       <div id="footer">© 2023-2026 Pedro Varela Saraiva</div>
     </div>

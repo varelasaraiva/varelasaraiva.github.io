@@ -49,22 +49,27 @@
                         <br />
                         Links to here:
                         
-                            
-                                <a href="weeknotes.html">/weeknotes</a>
-                                
+                                No backlinks
                             
                         </span>
                     </div>
                     <div id="content">
                         
                             <div class="pagination">
-                                
-                                    <span class="prev-link disabled"></span>
-                                
-                                
-                                    <a href="weeknotes-202508.html"
-                                       class="next-link">Weeknotes 202508 →</a>
-                                
+                                <div class="pagination-col prev-col">
+                                    
+                                        <span class="prev-link disabled"></span>
+                                    
+                                </div>
+                                <div class="pagination-col archive-col">
+                                    <a href="weeknotes.html" class="archive-link">Archive</a>
+                                </div>
+                                <div class="pagination-col next-col">
+                                    
+                                        <a href="weeknotes-202508.html"
+                                           class="next-link">Weeknotes 202508 -&gt;</a>
+                                    
+                                </div>
                             </div>
                         
                         <ul>
@@ -76,13 +81,14 @@
 
                         
                             <div class="reply-email">
-                                <a href="#"
-                                   data-user="varelasaraiva"
-                                   data-domain="gmail.com"
-                                   onmouseenter="this.href='mailto:' + this.dataset.user + '@' + this.dataset.domain + '?subject=Reply to: varelasaraiva.com - ' + encodeURIComponent('Weeknotes 202511')"
-                                   onfocus="this.href='mailto:' + this.dataset.user + '@' + this.dataset.domain + '?subject=Reply to: varelasaraiva.com - ' + encodeURIComponent('Weeknotes 202511')">
-                                    Reply by email
-                                </a>
+                                <a id="email-reply-link" href="#">Reply by email</a>
+                                <script>
+                                    (function () {
+                                        var email = atob("dmFyZWxhc2FyYWl2YUBnbWFpbC5jb20=");
+                                        var link = document.getElementById("email-reply-link");
+                                        link.href = "mailto:" + email + "?subject=Reply to: varelasaraiva.com - " + encodeURIComponent('Weeknotes 202511');
+                                    })();
+                                </script>
                             </div>
                         
                     </div>
