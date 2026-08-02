@@ -5,7 +5,7 @@
         <link>https://varelasaraiva.com/</link>
         <description>A log of changes to the site content</description>
         <language>en</language>
-        <lastBuildDate>Sun, 02 Aug 2026 22:14:28 +0000</lastBuildDate>
+        <lastBuildDate>Sun, 02 Aug 2026 22:20:52 +0000</lastBuildDate>
         <atom:link href="https://varelasaraiva.com/difflog.rss" rel="self" type="application/rss+xml" />
         <item>
             <title>Diff: /photos</title>
@@ -23,31 +23,15 @@
         <item>
             <title>Diff: Weeknotes 202631</title>
             <link>https://varelasaraiva.com/weeknotes-202631.html</link>
-            <guid isPermaLink="false">https://varelasaraiva.com/weeknotes-202631.html#diff-2026-08-02T23:13:17</guid>
+            <guid isPermaLink="false">https://varelasaraiva.com/weeknotes-202631.html#diff-2026-08-02T23:20:44</guid>
             <pubDate>Sun, 02 Aug 2026 23:13:17 +0000</pubDate>
-            <description><![CDATA[<pre><code>+---
-+title: Weeknotes 202631
-+category: weeknote
-+publish: true
-+---
-+This Saturday, we went to Hertford to meet the lovely baby E for the first time. It's always nice to spend time in Hertford—it's such a pleasant town.
-+<p style="text-align: center; font-size: 18px; color: #ccc; margin: 30px 0px">* * *</p>
-+On the digital gardening front, I finished a new feature: the [[photos]] page, where all photos posted in weeknotes are scraped and displayed in a mosaic of thumbnails. There were also some fixes to the [[rss|RSS]] feeds to make them more standards-compliant.
-+<p style="text-align: center; font-size: 18px; color: #ccc; margin: 30px 0px">* * *</p>
-+I have been trying to get back to trading some of my phone screen time for my Kindle. Since last year, I've been trying several ways of having a healthier relationship with my phone: uninstalling social apps, installing a more boring, text-based, application launcher, blocking loading certain websites in the browser, etc. 
+            <description><![CDATA[<pre><code>+
 +
-+Besides using my phone more intentionally, I've been trying to increase the reading throughput of actual books as well. Many people have adopted the ebook reader [Xteink X4](https://www.xteink.com/products/xteink-x4), which, with its small form factor, fits comfortably in a pocket and can go anywhere. It's an interesting little device indeed. I may have large pockets but I think old 6" Kindles are mostly pocketable too so it should do the job.
 +
-+### :camera:
-+![[Pasted image 20260802213603.jpg|Sunflowers in bloom in our garden]] 
 +
-+![[Pasted image 20260802213716.jpg|Colourful and ornamented door in Paddington]]
-+
-+![[Pasted image 20260802213806.jpg|Cherry Hinton Hall park in Cambridge]]
-+
-+![[Pasted image 20260802213836.jpg|Cherry Hinton Hall park in Cambridge]]
-+
-+![[Pasted image 20260802213928.jpg|By the river Lea in Hertford]]
+-![[Pasted image 20260802213928.jpg|By the river Lea in Hertford]]
+\ No newline at end of file
++![[Pasted image 20260802213928.jpg|By the river Lea in Hertford]]Pasted image 20260802213928.jpg
 \ No newline at end of file</code></pre>]]></description>
         </item>
         <item>
