@@ -6,6 +6,16 @@
               content="width=device-width, initial-scale=1.0, user-scalable=yes" />
         <meta name="fediverse:creator" content="@varelasaraiva@mastodon.social" />
         <title>VS.com - Weeknotes 202615</title>
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+        <link rel="icon"
+              type="image/svg+xml"
+              href="assets/favicon.svg" />
+        <link rel="icon"
+              type="image/png"
+              sizes="32x32"
+              href="assets/favicon-32x32.png" />
+        <link rel="apple-touch-icon"
+              href="assets/apple-touch-icon.png" />
         <link rel="alternate"
               type="application/rss+xml"
               title="Pedro Varela Saraiva - weeknotes"
@@ -16,12 +26,9 @@
               href="difflog.rss" />
         <link rel="stylesheet" href="css/single.css" />
         
-        <!-- Privacy-friendly analytics by Plausible -->
-        <script async src="https://plausible.io/js/pa-4R-iNB9ws2w_f6f7BQyUD.js"></script>
-        <script>
-          window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
-          plausible.init()
-        </script>
+        <script data-goatcounter="https://varelasaraiva.goatcounter.com/count"
+                async
+                src="//gc.zgo.at/count.js"></script>
         <!--[if lt IE 9]>
             <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
         <![endif]-->
@@ -108,5 +115,130 @@
                                 font-size: 2rem"></div>
                     <div id="footer">© 2023-2026 Pedro Varela Saraiva</div>
                 </div>
+                
+                    <div id="photos-lightbox" class="photos-lightbox" aria-hidden="true">
+                        <button class="lightbox-close" aria-label="Close">&times;</button>
+                        <button class="lightbox-nav lightbox-prev" aria-label="Previous photo">&#10094;</button>
+                        <button class="lightbox-nav lightbox-next" aria-label="Next photo">&#10095;</button>
+                        <div class="lightbox-content">
+                            <div class="lightbox-img-wrapper">
+                                <img id="lightbox-img" src="" alt="" />
+                                <div id="lightbox-watermark" class="lightbox-watermark"></div>
+                            </div>
+                            <div id="lightbox-caption" class="lightbox-caption"></div>
+                        </div>
+                    </div>
+                    <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                  const lightbox = document.getElementById("photos-lightbox");
+                  if (!lightbox) return;
+
+                  const lightboxImg = document.getElementById("lightbox-img");
+                  const lightboxCaption = document.getElementById("lightbox-caption");
+                  const lightboxWatermark = document.getElementById("lightbox-watermark");
+                  const closeBtn = document.querySelector(".lightbox-close");
+                  const prevBtn = document.querySelector(".lightbox-prev");
+                  const nextBtn = document.querySelector(".lightbox-next");
+
+                  const items = Array.from(document.querySelectorAll("#content img:not(#metadata img):not(.avatar)"));
+                  if (items.length === 0) return;
+
+                  let currentIndex = -1;
+
+                  function updatePhoto(index) {
+                    if (index < 0 || index >= items.length) return;
+                    currentIndex = index;
+                    const item = items[currentIndex];
+                    const src = item.getAttribute("src") || item.src;
+                    const caption = item.getAttribute("alt") || "";
+                    let watermark = item.getAttribute("data-watermark");
+
+                    if (!watermark) {
+                      const match = src.match(/(19\d\d|20\d\d)/);
+                      const year = match ? match[1] : "2026";
+                      watermark = "\u00A9 " + year + " Pedro Varela Saraiva";
+                    }
+
+                    lightboxImg.src = src;
+                    lightboxImg.alt = caption || "";
+
+                    if (lightboxWatermark) {
+                      lightboxWatermark.textContent = watermark;
+                    }
+
+                    if (caption && caption.trim() !== "") {
+                      lightboxCaption.textContent = caption;
+                      lightboxCaption.classList.add("has-caption");
+                    } else {
+                      lightboxCaption.textContent = "";
+                      lightboxCaption.classList.remove("has-caption");
+                    }
+                  }
+
+                  items.forEach(function(item, index) {
+                    item.style.cursor = "pointer";
+                    item.addEventListener("click", function(e) {
+                      e.stopPropagation();
+                      updatePhoto(index);
+                      lightbox.classList.add("active");
+                      lightbox.setAttribute("aria-hidden", "false");
+                      document.body.style.overflow = "hidden";
+                    });
+                  });
+
+                  function closeLightbox() {
+                    lightbox.classList.remove("active");
+                    lightbox.setAttribute("aria-hidden", "true");
+                    document.body.style.overflow = "";
+                    currentIndex = -1;
+                  }
+
+                  function showNext() {
+                    if (currentIndex >= 0 && items.length > 0) {
+                      const nextIdx = (currentIndex + 1) % items.length;
+                      updatePhoto(nextIdx);
+                    }
+                  }
+
+                  function showPrev() {
+                    if (currentIndex >= 0 && items.length > 0) {
+                      const prevIdx = (currentIndex - 1 + items.length) % items.length;
+                      updatePhoto(prevIdx);
+                    }
+                  }
+
+                  if (closeBtn) closeBtn.addEventListener("click", closeLightbox);
+                  if (nextBtn) nextBtn.addEventListener("click", function(e) { e.stopPropagation(); showNext(); });
+                  if (prevBtn) prevBtn.addEventListener("click", function(e) { e.stopPropagation(); showPrev(); });
+
+                  lightbox.addEventListener("click", function(e) {
+                    if (e.target === lightbox || e.target === closeBtn) {
+                      closeLightbox();
+                    }
+                  });
+
+                  document.addEventListener("keydown", function(e) {
+                    if (!lightbox.classList.contains("active")) return;
+                    if (e.key === "Escape") closeLightbox();
+                    else if (e.key === "ArrowRight") showNext();
+                    else if (e.key === "ArrowLeft") showPrev();
+                  });
+
+                  document.addEventListener("contextmenu", function(e) {
+                    if (e.target.tagName === "IMG" || e.target.closest("#photos-lightbox, .photos-item, .lightbox-content")) {
+                      e.preventDefault();
+                      return false;
+                    }
+                  }, false);
+
+                  document.addEventListener("dragstart", function(e) {
+                    if (e.target.tagName === "IMG" || e.target.closest("#photos-lightbox, .photos-item, .lightbox-content")) {
+                      e.preventDefault();
+                      return false;
+                    }
+                  }, false);
+                });
+                    </script>
+                
             </body>
         </html>
