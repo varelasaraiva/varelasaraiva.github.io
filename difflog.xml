@@ -5,7 +5,7 @@
         <link>https://varelasaraiva.com/</link>
         <description>A log of changes to the site content</description>
         <language>en</language>
-        <lastBuildDate>Sun, 02 Aug 2026 22:20:52 +0000</lastBuildDate>
+        <lastBuildDate>Mon, 03 Aug 2026 22:02:14 +0000</lastBuildDate>
         <atom:link href="https://varelasaraiva.com/difflog.rss" rel="self" type="application/rss+xml" />
         <item>
             <title>Diff: /photos</title>
@@ -23,15 +23,11 @@
         <item>
             <title>Diff: Weeknotes 202631</title>
             <link>https://varelasaraiva.com/weeknotes-202631.html</link>
-            <guid isPermaLink="false">https://varelasaraiva.com/weeknotes-202631.html#diff-2026-08-02T23:20:44</guid>
+            <guid isPermaLink="false">https://varelasaraiva.com/weeknotes-202631.html#diff-2026-08-03T23:01:58</guid>
             <pubDate>Sun, 02 Aug 2026 23:13:17 +0000</pubDate>
-            <description><![CDATA[<pre><code>+
-+
-+
-+
--![[Pasted image 20260802213928.jpg|By the river Lea in Hertford]]
+            <description><![CDATA[<pre><code>-![[Pasted image 20260802213928.jpg|By the river Lea in Hertford]]Pasted image 20260802213928.jpg
 \ No newline at end of file
-+![[Pasted image 20260802213928.jpg|By the river Lea in Hertford]]Pasted image 20260802213928.jpg
++![[Pasted image 20260802213928.jpg|By the river Lea in Hertford]]
 \ No newline at end of file</code></pre>]]></description>
         </item>
         <item>
