@@ -31,7 +31,8 @@ div#bar {
 }
 
 div#bar2 {
-  width: 768px;
+  max-width: 768px;
+  margin: 0 auto;
 }
 
 p {
@@ -131,7 +132,7 @@ pre {
   }
 
   div#bar2 {
-    width: 768px;
+    max-width: 768px;
     margin: 0 auto;
   }
 
