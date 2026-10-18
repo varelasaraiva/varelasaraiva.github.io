@@ -5,7 +5,7 @@
         <meta name="viewport"
               content="width=device-width, initial-scale=1.0, user-scalable=yes" />
         <meta name="fediverse:creator" content="@varelasaraiva@mastodon.social" />
-        <title>VS.com - /rss</title>
+        <title>VS.com - /uses</title>
         <link rel="icon" type="image/x-icon" href="favicon.ico" />
         <link rel="icon"
               type="image/svg+xml"
@@ -21,9 +21,9 @@
               title="Pedro Varela Saraiva - weeknotes"
               href="weeknotes.rss" />
         <link rel="alternate"
-              type="application/rss+xml"
-              title="Pedro Varela Saraiva - diff log"
-              href="difflog.rss" />
+              type="application/atom+xml"
+              title="Pedro Varela Saraiva - weeknotes (Atom)"
+              href="weeknotes.atom" />
         <link rel="stylesheet" href="css/single.css" />
         
         <script data-goatcounter="https://varelasaraiva.goatcounter.com/count"
@@ -36,12 +36,13 @@
     <body>
         <div id="bar">
             <div id="bar2">
-                <b>/rss</b> - <a href="index.html">Home</a>
+                <b>/uses</b> - <a href="index.html">Home</a>
+                <span style="float:right;cursor:pointer;user-select:none;" id="search-trigger" title="Search (Ctrl+K)"><img src="assets/search.svg" alt="Search" width="16" height="16" style="vertical-align:middle"></span>
             </div>
         </div>
         <div id="container">
             <div id="header">
-                <div id="title">/rss</div>
+                <div id="title">/uses</div>
                 <span id="metadata">
                     posted by
                     <img src="assets/avatar_32.png"
@@ -49,12 +50,11 @@
                                 margin: 0 5px 0 0;
                                 padding: 0;
                                 vertical-align: -0.4rem" />
-                    <b>Pedro Varela Saraiva</b> on 2026-08-02
-                    (<a href="diff/diff_rss.html">diff log</a>)
+                    <b>Pedro Varela Saraiva</b> on 2026-10-18
                     <br />
                     <!--•-->&nbsp;
                     <br />
-                    <!--2026-03-20 last modified in-->
+                    <!--2026-03-26 last modified in-->
                     Tags:
                     
                         
@@ -64,18 +64,33 @@
                         <br />
                         Links to here:
                         
-                            
-                                <a href="weeknotes-202631.html">Weeknotes 202631</a>
-                                
+                                No backlinks
                             
                         </span>
                     </div>
                     <div id="content">
                         
-                        <p>You can subscribe to this website by using the RSS feeds below in a feed reader like <a href="https://inoreader.com">Inoreader</a> . Due to the non-linear nature of the wiki, the two reverse chronological views that are available at the moment are just the <a href="weeknotes.html" class="internal-link">weeknotes</a> and the fire hose that lists diffs of all pages in the wiki.</p>
+                        <h2>Hardware</h2>
 <ul>
-<li>Weeknotes only - <a href="weeknotes.rss">rss</a> | <a href="weeknotes.xml">xml</a></li>
-<li>Site-wide diff log - <a href="difflog.rss">rss</a> | <a href="difflog.xml">xml</a></li>
+<li>Laptop<ul>
+<li>Personal: <a href="pixelbook.html" class="internal-link">Google Pixelbook</a></li>
+<li>Work: Apple Macbook Pro 16” (2021)</li>
+</ul>
+</li>
+<li>Phone: Google Pixel 8 Pro</li>
+<li>E-book reader<ul>
+<li>6”: Amazon Kindle 4th gen.</li>
+<li>13.3”: Fujitsu Quaderno A4 1st gen.</li>
+</ul>
+</li>
+<li>Screens: 2x Phillips 276E8VJSB 27” 4K</li>
+<li>Keyboard: Keychron K1 Pro</li>
+<li>Mice: Logitech MX Vertical</li>
+<li>Headphones<ul>
+<li>Work: JBL TUNE770NC</li>
+<li>Commute: JBL TUNE215BT</li>
+</ul>
+</li>
 </ul>
 
                         
@@ -212,5 +227,22 @@
                 });
                     </script>
                 
+            <!-- Search Modal -->
+            <div class="search-overlay" id="search-overlay">
+                <div class="search-container">
+                    <div class="search-input-wrapper">
+                        <img src="assets/search.svg" alt="Search" width="16" height="16" style="opacity:0.5">
+                        <input class="search-input" id="search-input"
+                               type="text" placeholder="Search pages..."
+                               autocomplete="off" spellcheck="false" aria-label="Search">
+                        <kbd style="font-size:0.75rem;color:#aaa;border:1px solid #ddd;padding:2px 6px;border-radius:4px;font-family:inherit;">Esc</kbd>
+                    </div>
+                    <div class="search-results" id="search-results"></div>
+                    <div class="search-hint">
+                        <kbd>↑↓</kbd> navigate &nbsp; <kbd>↵</kbd> open &nbsp; <kbd>esc</kbd> close
+                    </div>
+                </div>
+            </div>
+            <script src="assets/search.js"></script>
             </body>
         </html>

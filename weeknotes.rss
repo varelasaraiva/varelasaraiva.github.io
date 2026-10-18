@@ -5,8 +5,29 @@
         <link>https://varelasaraiva.com/</link>
         <description>A collection of weeknotes</description>
         <language>en</language>
-        <lastBuildDate>Mon, 03 Aug 2026 22:02:14 +0000</lastBuildDate>
+        <lastBuildDate>Sun, 18 Oct 2026 21:45:54 +0000</lastBuildDate>
         <atom:link href="https://varelasaraiva.com/weeknotes.rss" rel="self" type="application/rss+xml" />
+        <item>
+            <title>Weeknotes 202642</title>
+            <link>https://varelasaraiva.com/weeknotes-202642.html</link>
+            <guid isPermaLink="true">https://varelasaraiva.com/weeknotes-202642.html</guid>
+            <pubDate>Sun, 18 Oct 2026 20:05:11 +0000</pubDate>
+            <description><![CDATA[<ul>
+<li>Hi again - long time no see.</li>
+<li>We’ve survived the challenging logistics of the summer school holidays (SSH)! I’m relieved to leave them behind.</li>
+<li>We capped the SSH with another trip to Lisbon. This was the one where we finally baptised our two daughters, after a few years of preparation and making sure we, family, godparents and witnesses were all in town at the same time.</li>
+<li>I have, at some point, finished <em>The Screwtape Letters</em> and started <em>Sync</em> by Steven Strogatz, which is fortunately a complete page-turner 20% in. More about <em>The Screwtape Letters</em> at another time, maybe.</li>
+<li>This week my 2010 Renault Mégane has done its 100,000th mile. I’ve been thinking about replacing it with something newer for at least 3 years but I’m going to keep it, probably until the end. I asked myself why I would want a new car and couldn’t come up with anything good. So, that’s where my mind is right now. I was not the only owner but at least with me the car has been regularly serviced and it runs absolutely fine.</li>
+<li>Something else that happened this week Google’s Antigravity hackathon in their Central Saint Giles office. As usual, Google treats one of their important clients very well and it was nice to end a pleasant day winning the hackathon with the group I was in.</li>
+<li>In the meantime, the static site generator underwent some deep refactors to correct some unfortunate design decisions that didn’t prove useful in the end and to streamline publishing to GitHub Pages. What visibly changed was swapping the font from Inter to IBM Plex Sans and there is now full-text search—see top right corner.</li>
+</ul>
+<h2>📷</h2>
+<figure class="note-figure"><img loading="lazy" decoding="async" src="https://varelasaraiva.com/attachments/PXL_20261016_140343153.webp" alt="The 2010 Renault Mégane turning 100,000" data-watermark="© 2026 Pedro Varela Saraiva" /><figcaption class="note-figcaption">The 2010 Renault Mégane turning 100,000</figcaption></figure>
+
+<figure class="note-figure"><img loading="lazy" decoding="async" src="https://varelasaraiva.com/attachments/PXL_20260926_180100864.webp" alt="Sunset with saturated colours" data-watermark="© 2026 Pedro Varela Saraiva" /><figcaption class="note-figcaption">Sunset with saturated colours</figcaption></figure>
+
+]]></description>
+        </item>
         <item>
             <title>Weeknotes 202631</title>
             <link>https://varelasaraiva.com/weeknotes-202631.html</link>
@@ -15,7 +36,7 @@
             <description><![CDATA[<p>This Saturday, we went to Hertford to meet the lovely baby E for the first time. It’s always nice to spend time in Hertford—it’s such a pleasant town.</p>
 <p style="text-align: center; font-size: 18px; color: #ccc; margin: 30px 0px">* * *</p>
 
-<p>On the digital gardening front, I finished a new feature: the <a href="https://varelasaraiva.com/photos.html" class="internal-link">photos</a> page, where all photos posted in <a href="https://varelasaraiva.com/weeknotes.html" class="internal-link">weeknotes</a> are scraped and displayed in a mosaic of thumbnails. There were also some fixes to the <a href="https://varelasaraiva.com/rss.html" class="internal-link">RSS</a> feeds to make them more standards-compliant.</p>
+<p>On the digital gardening front, I finished a new feature: the <a href="https://varelasaraiva.com/photos.html" class="internal-link">photos</a> page, where all photos posted in <a href="https://varelasaraiva.com/weeknotes.html" class="internal-link">weeknotes</a> are scraped and displayed in a mosaic of thumbnails. There were also some fixes to the <a href="https://varelasaraiva.com/subscribe.html" class="internal-link">RSS</a> feeds to make them more standards-compliant.</p>
 <p style="text-align: center; font-size: 18px; color: #ccc; margin: 30px 0px">* * *</p>
 
 <p>I have been trying to get back to trading some of my phone screen time for my Kindle. Since last year, I’ve been trying several ways of having a healthier relationship with my phone: uninstalling social apps, installing a more boring, text-based, application launcher, blocking loading certain websites in the browser, etc.</p>

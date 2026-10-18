@@ -24,9 +24,21 @@
     />
     <link
       rel="alternate"
+      type="application/atom+xml"
+      title="Pedro Varela Saraiva - weeknotes (Atom)"
+      href="weeknotes.atom"
+    />
+    <link
+      rel="alternate"
       type="application/rss+xml"
       title="Pedro Varela Saraiva - diff log"
       href="difflog.rss"
+    />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      title="Pedro Varela Saraiva - diff log (Atom)"
+      href="difflog.atom"
     />
     <link rel="stylesheet" href="css/single.css" />
     <!--[if lt IE 9]>
@@ -59,22 +71,15 @@
         sector, currently living in a leafy part of South East England somewhere
         between London and Cambridge. Husband and dad of two girls.
       </p>
-      <p>
-        Gardening this site is one of my hobbies. These days most of its content
-        is self-referential, consisting of meta-notes about building a static site
-        generator and posting personal content online, sprinkled with the odd,
-        mundane life update and wacky children's antics. It is still very much
-        under construction so please bear with me.
-      </p>
 
       <p>
         Start here:
         <!--<a href="now.html">/now</a>-->
+        <!--<a href="about.html">/about</a>-->
         <a href="weeknotes.html">/weeknotes</a>
         <a href="photos.html">/photos</a>
-        <a href="following.html">/following</a>
-        <!--<a href="uses.html">/uses</a>-->
-        <a href="rss.html">/rss</a>
+        <a href="subscribe.html">/subscribe</a>
+        <!--<a href="#" id="search-trigger">/search</a>-->
       </p>
 
       <p>
@@ -90,5 +95,45 @@
       </p>
       <div id="footer">© 2023-2026 Pedro Varela Saraiva</div>
     </div>
+    <!-- Search Modal -->
+    <div class="search-overlay" id="search-overlay">
+      <div class="search-container">
+        <div class="search-input-wrapper">
+          <img
+            src="assets/search.svg"
+            alt="Search"
+            width="16"
+            height="16"
+            style="opacity: 0.5"
+          />
+          <input
+            class="search-input"
+            id="search-input"
+            type="text"
+            placeholder="Search pages..."
+            autocomplete="off"
+            spellcheck="false"
+            aria-label="Search"
+          />
+          <kbd
+            style="
+              font-size: 0.75rem;
+              color: #aaa;
+              border: 1px solid #ddd;
+              padding: 2px 6px;
+              border-radius: 4px;
+              font-family: inherit;
+            "
+            >Esc</kbd
+          >
+        </div>
+        <div class="search-results" id="search-results"></div>
+        <div class="search-hint">
+          <kbd>↑↓</kbd> navigate &nbsp; <kbd>↵</kbd> open &nbsp;
+          <kbd>esc</kbd> close
+        </div>
+      </div>
+    </div>
+    <script src="assets/search.js"></script>
   </body>
 </html>

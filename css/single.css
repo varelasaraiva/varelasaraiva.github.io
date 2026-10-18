@@ -1,10 +1,8 @@
-@import url("./font-files/inter.css");
+@import url("./font-files/ibm-plex-sans.css");
 @import url("./font-files/jetbrains-mono-nf.css");
 
-@supports (font-variation-settings: normal) {
-  html {
-    font-family: "Inter var", sans-serif;
-  }
+html {
+  font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 * {
@@ -12,7 +10,8 @@
 }
 
 body {
-  font-family: "Inter var", sans-serif;
+  font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 1em;
   background-color: #ffffff;
   color: #000;
   margin: 0;
@@ -36,11 +35,11 @@ div#bar2 {
 }
 
 p {
-  line-height: 1.5em;
+  line-height: 1.5rem;
 }
 
 li {
-  line-height: 1.5em;
+  line-height: 1.5rem;
   margin: 10px 0px 10px 0px;
 }
 
@@ -491,7 +490,10 @@ figcaption.note-figcaption {
   cursor: pointer;
   z-index: 10000;
   user-select: none;
-  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .lightbox-prev {
@@ -552,7 +554,13 @@ img {
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   color: rgba(255, 255, 255, 0.9);
-  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family:
+    "IBM Plex Sans",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
   font-size: 0.8rem;
   font-weight: 500;
   letter-spacing: 0.02em;
@@ -585,4 +593,135 @@ img {
   display: block;
 }
 
+/* Search Modal */
+.search-overlay {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 15vh;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
 
+.search-overlay.active {
+  display: flex;
+  opacity: 1;
+}
+
+.search-container {
+  width: 90%;
+  max-width: 560px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  max-height: 70vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-input-wrapper {
+  padding: 16px 20px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.search-input-wrapper img {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 1.1rem;
+  font-family: "IBM Plex Sans", sans-serif;
+  background: transparent;
+}
+
+.search-results {
+  overflow-y: auto;
+  flex: 1;
+}
+
+.search-result-item {
+  display: block;
+  padding: 12px 20px;
+  border-bottom: 1px solid #f5f5f5;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  text-decoration: none;
+  color: inherit;
+  font-weight: normal;
+}
+
+.search-result-item:hover,
+.search-result-item.selected {
+  background-color: #e0fbf7;
+  text-decoration: none;
+}
+
+.search-result-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.search-result-title mark {
+  background-color: aquamarine;
+  color: #000;
+  border-radius: 2px;
+  padding: 0 2px;
+  font-weight: 600;
+}
+
+.search-result-preview {
+  font-size: 0.8rem;
+  color: #777;
+  margin-top: 4px;
+  line-height: 1.4;
+  font-weight: normal;
+}
+
+.search-result-meta {
+  font-size: 0.75rem;
+  color: #aaa;
+  margin-top: 4px;
+  font-weight: normal;
+}
+
+.search-empty {
+  padding: 24px 20px;
+  text-align: center;
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.search-hint {
+  padding: 10px 20px;
+  text-align: center;
+  color: #bbb;
+  font-size: 0.75rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+.search-hint kbd {
+  font-size: 0.7rem;
+  color: #aaa;
+  border: 1px solid #ddd;
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-family: "IBM Plex Sans", sans-serif;
+  background: #f9f9f9;
+}

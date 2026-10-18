@@ -21,9 +21,9 @@
               title="Pedro Varela Saraiva - weeknotes"
               href="weeknotes.rss" />
         <link rel="alternate"
-              type="application/rss+xml"
-              title="Pedro Varela Saraiva - diff log"
-              href="difflog.rss" />
+              type="application/atom+xml"
+              title="Pedro Varela Saraiva - weeknotes (Atom)"
+              href="weeknotes.atom" />
         <link rel="stylesheet" href="css/single.css" />
         
         <script data-goatcounter="https://varelasaraiva.goatcounter.com/count"
@@ -37,6 +37,7 @@
         <div id="bar">
             <div id="bar2">
                 <b>Weeknotes 202613</b> - <a href="index.html">Home</a>
+                <span style="float:right;cursor:pointer;user-select:none;" id="search-trigger" title="Search (Ctrl+K)"><img src="assets/search.svg" alt="Search" width="16" height="16" style="vertical-align:middle"></span>
             </div>
         </div>
         <div id="container">
@@ -50,7 +51,6 @@
                                 padding: 0;
                                 vertical-align: -0.4rem" />
                     <b>Pedro Varela Saraiva</b> on 2026-03-31
-                    (<a href="diff/diff_weeknotes-202613.html">diff log</a>)
                     <br />
                     <!--•-->&nbsp;
                     <br />
@@ -238,5 +238,22 @@
                 });
                     </script>
                 
+            <!-- Search Modal -->
+            <div class="search-overlay" id="search-overlay">
+                <div class="search-container">
+                    <div class="search-input-wrapper">
+                        <img src="assets/search.svg" alt="Search" width="16" height="16" style="opacity:0.5">
+                        <input class="search-input" id="search-input"
+                               type="text" placeholder="Search pages..."
+                               autocomplete="off" spellcheck="false" aria-label="Search">
+                        <kbd style="font-size:0.75rem;color:#aaa;border:1px solid #ddd;padding:2px 6px;border-radius:4px;font-family:inherit;">Esc</kbd>
+                    </div>
+                    <div class="search-results" id="search-results"></div>
+                    <div class="search-hint">
+                        <kbd>↑↓</kbd> navigate &nbsp; <kbd>↵</kbd> open &nbsp; <kbd>esc</kbd> close
+                    </div>
+                </div>
+            </div>
+            <script src="assets/search.js"></script>
             </body>
         </html>
