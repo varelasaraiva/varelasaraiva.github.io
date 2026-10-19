@@ -5,7 +5,7 @@
         <link>https://varelasaraiva.com/</link>
         <description>A collection of weeknotes</description>
         <language>en</language>
-        <lastBuildDate>Sun, 18 Oct 2026 21:45:54 +0000</lastBuildDate>
+        <lastBuildDate>Mon, 19 Oct 2026 09:19:09 +0000</lastBuildDate>
         <atom:link href="https://varelasaraiva.com/weeknotes.rss" rel="self" type="application/rss+xml" />
         <item>
             <title>Weeknotes 202642</title>
@@ -18,7 +18,7 @@
 <li>We capped the SSH with another trip to Lisbon. This was the one where we finally baptised our two daughters, after a few years of preparation and making sure we, family, godparents and witnesses were all in town at the same time.</li>
 <li>I have, at some point, finished <em>The Screwtape Letters</em> and started <em>Sync</em> by Steven Strogatz, which is fortunately a complete page-turner 20% in. More about <em>The Screwtape Letters</em> at another time, maybe.</li>
 <li>This week my 2010 Renault Mégane has done its 100,000th mile. I’ve been thinking about replacing it with something newer for at least 3 years but I’m going to keep it, probably until the end. I asked myself why I would want a new car and couldn’t come up with anything good. So, that’s where my mind is right now. I was not the only owner but at least with me the car has been regularly serviced and it runs absolutely fine.</li>
-<li>Something else that happened this week Google’s Antigravity hackathon in their Central Saint Giles office. As usual, Google treats one of their important clients very well and it was nice to end a pleasant day winning the hackathon with the group I was in.</li>
+<li>Something else that happened this week was Google’s Antigravity hackathon in their Central Saint Giles office. As usual, Google treats one of their important clients very well and it was nice to end a pleasant day winning the hackathon with the group I was in.</li>
 <li>In the meantime, the static site generator underwent some deep refactors to correct some unfortunate design decisions that didn’t prove useful in the end and to streamline publishing to GitHub Pages. What visibly changed was swapping the font from Inter to IBM Plex Sans and there is now full-text search—see top right corner.</li>
 </ul>
 <h2>📷</h2>

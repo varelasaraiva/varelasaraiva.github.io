@@ -5,7 +5,7 @@
     <link href="https://varelasaraiva.com/weeknotes.atom" rel="self" type="application/atom+xml" />
     <link href="https://varelasaraiva.com/" rel="alternate" type="text/html" />
     <id>https://varelasaraiva.com/weeknotes.atom</id>
-    <updated>2026-10-18T22:45:53Z</updated>
+    <updated>2026-10-19T10:19:08Z</updated>
     <author>
         <name>Pedro Varela Saraiva</name>
     </author>
@@ -14,14 +14,14 @@
         <link href="https://varelasaraiva.com/weeknotes-202642.html" rel="alternate" type="text/html" />
         <id>https://varelasaraiva.com/weeknotes-202642.html</id>
         <published>2026-10-18T20:05:11Z</published>
-        <updated>2026-10-18T22:45:53Z</updated>
+        <updated>2026-10-19T10:19:08Z</updated>
         <content type="html"><![CDATA[<ul>
 <li>Hi again - long time no see.</li>
 <li>We’ve survived the challenging logistics of the summer school holidays (SSH)! I’m relieved to leave them behind.</li>
 <li>We capped the SSH with another trip to Lisbon. This was the one where we finally baptised our two daughters, after a few years of preparation and making sure we, family, godparents and witnesses were all in town at the same time.</li>
 <li>I have, at some point, finished <em>The Screwtape Letters</em> and started <em>Sync</em> by Steven Strogatz, which is fortunately a complete page-turner 20% in. More about <em>The Screwtape Letters</em> at another time, maybe.</li>
 <li>This week my 2010 Renault Mégane has done its 100,000th mile. I’ve been thinking about replacing it with something newer for at least 3 years but I’m going to keep it, probably until the end. I asked myself why I would want a new car and couldn’t come up with anything good. So, that’s where my mind is right now. I was not the only owner but at least with me the car has been regularly serviced and it runs absolutely fine.</li>
-<li>Something else that happened this week Google’s Antigravity hackathon in their Central Saint Giles office. As usual, Google treats one of their important clients very well and it was nice to end a pleasant day winning the hackathon with the group I was in.</li>
+<li>Something else that happened this week was Google’s Antigravity hackathon in their Central Saint Giles office. As usual, Google treats one of their important clients very well and it was nice to end a pleasant day winning the hackathon with the group I was in.</li>
 <li>In the meantime, the static site generator underwent some deep refactors to correct some unfortunate design decisions that didn’t prove useful in the end and to streamline publishing to GitHub Pages. What visibly changed was swapping the font from Inter to IBM Plex Sans and there is now full-text search—see top right corner.</li>
 </ul>
 <h2>📷</h2>
